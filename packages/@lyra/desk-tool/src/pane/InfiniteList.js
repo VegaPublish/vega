@@ -3,8 +3,14 @@ import React from 'react'
 import VirtualList from 'react-tiny-virtual-list'
 import enhanceWithAvailHeight from './enhanceWithAvailHeight'
 
+const ITEM_SIZES = {
+  list: 56,
+  default: 56,
+  detail: 90
+}
+
 export default enhanceWithAvailHeight(
-  class InfiniteList extends React.PureComponent {
+  class InfiniteList extends React.Component {
     static propTypes = {
       height: PropTypes.number,
       items: PropTypes.array, // eslint-disable-line react/forbid-prop-types
@@ -22,9 +28,7 @@ export default enhanceWithAvailHeight(
     }
 
     state = {
-      triggerUpdate: 0,
-      itemHeight: 56,
-      itemSize: undefined
+      triggerUpdate: 0
     }
 
     componentWillReceiveProps(prevProps) {
@@ -41,10 +45,6 @@ export default enhanceWithAvailHeight(
           itemSize: undefined
         })
       }
-    }
-
-    getItemHeight = item => {
-      return 56
     }
 
     setMeasureElement = element => {
@@ -66,15 +66,11 @@ export default enhanceWithAvailHeight(
     }
 
     render() {
-      const {layout, height, items, className, renderItem} = this.props
-      const {triggerUpdate, itemSize} = this.state
+      const {layout, height, items, className} = this.props
+      const {triggerUpdate} = this.state
 
       if (!items || items.length === 0) {
         return <div />
-      }
-
-      if (!itemSize && items) {
-        return <div ref={this.setMeasureElement}>{renderItem(items[0], 0)}</div>
       }
 
       return (
@@ -86,7 +82,7 @@ export default enhanceWithAvailHeight(
           className={className || ''}
           height={height}
           itemCount={items.length}
-          itemSize={itemSize}
+          itemSize={ITEM_SIZES[layout || 'default']}
           renderItem={this.renderItem}
           overscanCount={50}
           data-trigger-update-hack={
