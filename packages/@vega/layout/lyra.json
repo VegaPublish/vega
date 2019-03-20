@@ -1,0 +1,17 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@lyra/base/root",
+      "name": "part:@lyra/vega-layout/root",
+      "path": "components/Router"
+    },
+    {
+      "implements": "part:@vega/router",
+      "path": "router"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  position: relative;
+}
+
+.rootIsOpen {
+  composes: root;
+}
+
+.rootIsClosed {
+  composes: root;
+}
+
+.bubble {
+  background-color: var(--brand-primary-light);
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+}
+.bubbleWithUnread {
+  composes: bubble;
+  background-color: var(--brand-secondary);
+}
+
+.groupHeading {
+  font-size: 90%;
+  width: calc(100% - 6em);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+.feed {
+  /* padding: 0.3em; */
+  text-align: left;
+  color: #333;
+  text-decoration: none;
+
+  @nest .rootIsClosed & {
+    display: none;
+  }
+}

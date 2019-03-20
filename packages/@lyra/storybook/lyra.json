@@ -1,0 +1,42 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+
+  "parts": [
+    {
+      "name": "part:@lyra/storybook",
+      "description": "Lyra wrapped version of Kadira's React Storybook",
+      "path": "index.js"
+    },
+    {
+      "name": "part:@lyra/storybook/decorators/center",
+      "description": "Center decorator for storybook",
+      "path": "addons/Center.js"
+    },
+    {
+      "name": "part:@lyra/storybook/iframe",
+      "description": "React component that renders a fullscreen iframe that shows the storybook",
+      "path": "tool/StorybookTool.js"
+    },
+    {
+      "name": "part:@lyra/storybook/addons/knobs",
+      "description": "Knobs addon for storybook",
+      "path": "addons/Knobs.js"
+    },
+    {
+      "name": "part:@lyra/storybook/addons/lyra",
+      "description": "Lyra addon for storybook",
+      "path": "addons/lyra/Lyra.js"
+    },
+    {
+      "implements": "part:@lyra/server/initializer",
+      "path": "server/fork.js"
+    },
+    {
+      "implements": "part:@lyra/base/tool",
+      "path": "tool/index.js"
+    }
+  ]
+}

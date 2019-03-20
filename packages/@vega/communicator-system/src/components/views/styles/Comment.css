@@ -1,0 +1,52 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  margin-bottom: var(--small-padding);
+  padding: var(--small-padding);
+}
+
+.root p {
+  margin: 0;
+  padding: 0;
+}
+
+.blockContent {
+  margin: var(--small-padding) 0;
+}
+
+.placeholder {
+  width: 100%;
+  height: 15rem;
+}
+
+.functions {
+  font-size: var(--font-size-xsmall);
+
+  /* spacing the functions */
+  @nest & > * + * {
+    margin-left: 0.5em;
+  }
+}
+
+.edit {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+.delete {
+  cursor: pointer;
+  color: var(--state-danger-color);
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+.focused {
+  background-color: var(--white);
+  padding: var(--small-padding);
+  border: 1px solid var(--gray-darker);
+}

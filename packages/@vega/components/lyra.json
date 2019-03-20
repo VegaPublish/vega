@@ -1,0 +1,28 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@lyra/components/formfields/default",
+      "description": "Vega-specific override of DefaultFormField",
+      "path": "views/FormField.js"
+    },
+    {
+      "implements": "part:@lyra/components/fieldsets/default",
+      "description": "Vega-specific override of DefaultFieldset",
+      "path": "views/Fieldset.js"
+    },
+    {
+      "implements": "part:@vega/components/formfields/article-block-editor",
+      "description": "Vega-specific override of BlockEditor",
+      "path": "views/ArticleBlockEditor"
+    },
+    {
+      "implements": "part:@vega/components/formfields/comment-block-editor",
+      "description": "Vega-specific override of BlockEditor",
+      "path": "views/CommentBlockEditor"
+    }
+  ]
+}

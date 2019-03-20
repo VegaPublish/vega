@@ -1,0 +1,51 @@
+{
+  "toolMenu": [
+    {
+      "toolName": "issues",
+      "options": {"accessibleTo": ["admin", "editor"]}
+    },
+    {
+      "toolName": "tracks",
+      "options": {"accessibleTo": ["admin", "editor"]}
+    },
+    {
+      "toolName": "composer",
+      "options": {
+        "hiddenByDefault": true,
+        "accessibleTo": ["admin", "submitter", "editor"]
+      }
+    },
+    {
+      "toolName": "submissions",
+      "options": {
+        "hiddenByDefault": false,
+        "accessibleTo": ["admin", "submitter", "editor"]
+      }
+    },
+    {
+      "toolName": "review",
+      "options": {
+        "hiddenByDefault": false,
+        "accessibleTo": ["admin", "reviewer", "editor"]
+      }
+    },
+    {
+      "toolName": "desk",
+      "options": {
+        "hiddenByDefault": true,
+        "accessibleTo": ["admin", "editor"]
+      }
+    },
+    {
+      "toolName": "articleState",
+      "options": {
+        "hiddenByDefault": true,
+        "accessibleTo": ["admin", "submitter", "reviewer", "editor"]
+      }
+    },
+    {
+      "toolName": "vision",
+      "options": {"hiddenByDefault": false, "accessibleTo": ["admin"]}
+    }
+  ]
+}

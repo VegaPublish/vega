@@ -1,0 +1,40 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cell {
+  font-size: 1em;
+  padding: 1em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  max-width: 7em;
+  cursor: default;
+  white-space: wrap;
+  text-align: center;
+
+  @nest &:last-child {
+    border-right: 0;
+  }
+}
+
+.rootCell {
+  composes: cell;
+}
+
+.rowHeaderCell {
+  composes: cell;
+  text-align: left;
+  font-weight: 600;
+}
+
+.columnHeaderCell {
+  composes: cell;
+  font-weight: 600;
+}
+
+.row {
+  @nest &:last-child .cell {
+    border-bottom: 0;
+  }
+}

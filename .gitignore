@@ -1,0 +1,27 @@
+flow-typed
+
+# Compiled javascript
+lib
+
+# Build assets
+dist
+
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directories
+node_modules
+
+.DS_Store
+
+flow-typed
+
+.vscode
+
+# Lockfiles
+yarn.lock
+package-lock.json

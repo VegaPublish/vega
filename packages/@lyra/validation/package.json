@@ -1,0 +1,44 @@
+{
+  "name": "@lyra/validation",
+  "version": "0.2.5",
+  "description": "Validation and warning infrastructure for Lyra projects",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "validation"
+  ],
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "devDependencies": {
+    "jest": "^23.4.2"
+  },
+  "dependencies": {
+    "clone-deep": "^2.0.1",
+    "es6-error": "^4.0.2",
+    "type-of-is": "^3.5.1"
+  },
+  "jest": {
+    "testURL": "http://localhost",
+    "verbose": true,
+    "collectCoverage": true
+  }
+}

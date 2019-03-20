@@ -1,0 +1,12 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.title {
+  composes: heading from 'part:@lyra/components/dialogs/fullscreen-style';
+  margin-left: 0;
+}
+
+.summary {
+  font-size: var(--font-size-h4);
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}

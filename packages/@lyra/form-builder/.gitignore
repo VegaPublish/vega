@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+npm-shrinkwrap.json
+.DS_Store
+coverage
+.idea
+/lib
+form-builder-old
+plugins/@lyra
+examples/schema-testbed/plugins/@lyra
+flow-typed

@@ -1,0 +1,41 @@
+@import 'part:@lyra/base/theme/variables-style';
+:root {
+  --tool-selector-border: 0.25rem;
+}
+
+.root {
+  height: calc(2.5rem - var(--tool-selector-border));
+  padding-bottom: 0.25rem;
+  overflow: hidden;
+}
+
+.toolList {
+  display: block;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.item {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 1rem;
+  text-transform: capitalize;
+}
+
+.rightItem {
+  composes: item;
+  float: right;
+}
+
+.activeItem {
+  composes: item;
+  border-bottom: var(--tool-selector-border) solid var(--brand-primary);
+}
+
+.toolLink {
+  line-height: calc(2.5rem - var(--tool-selector-border));
+  display: block;
+  color: var(--black);
+  text-decoration: none;
+}

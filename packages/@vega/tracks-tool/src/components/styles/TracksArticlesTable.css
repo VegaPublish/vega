@@ -1,0 +1,126 @@
+@import 'part:@lyra/base/theme/variables-style';
+@import 'part:@lyra/base/theme/responsive-style';
+
+.root {
+  composes: table from 'part:@vega/theme/table-style';
+  font-size: 0.8em;
+  margin-bottom: 1rem;
+}
+
+.hoverState {
+  cursor: default;
+  @nest &:hover {
+    background-color: var(--white);
+  }
+}
+
+.cell {
+  composes: cell from 'part:@vega/theme/table-style';
+
+  @media (--max-screen-medium) {
+    padding: 0.5rem;
+  }
+
+  @nest &:hover {
+    background-color: var(--white);
+  }
+}
+
+.active {
+  background-color: var(--white);
+}
+
+.inActive {
+}
+
+.stageIncluded {
+}
+
+.stageNotIncluded {
+  background-color: var(--gray-lighter);
+}
+
+.trackRow {
+  composes: row from 'part:@vega/theme/table-style';
+}
+
+.rootCell {
+  composes: rootCell from 'part:@vega/theme/table-style';
+  max-width: 5em;
+}
+
+.arrowDropDown {
+  font-size: 1.5rem;
+}
+
+.headCell {
+  composes: columnHeaderCell from 'part:@vega/theme/table-style';
+}
+
+.header {
+  text-transform: uppercase;
+  padding: 0.5em;
+}
+
+.trackHeader {
+  composes: rowHeaderCell from 'part:@vega/theme/table-style';
+  composes: hoverState;
+  composes: header;
+}
+
+.stageHeader {
+  composes: columnHeaderCell from 'part:@vega/theme/table-style';
+  composes: hoverState;
+  composes: header;
+
+  @nest & .stageTitle {
+    transition: transform 0.15s linear;
+  }
+
+  /* Rotate */
+  @media (--max-screen-medium) {
+    height: 10em;
+    position: relative;
+
+    @nest & .stageTitle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform-origin: top left;
+      transform: rotate(-90deg) translateY(-50%);
+    }
+  }
+}
+
+.dots {
+  display: none;
+
+  @media (--screen-medium) {
+    display: inline-block;
+  }
+}
+
+.quantity {
+  display: block;
+  font-size: 1.2em;
+  text-align: center;
+
+  @media (--screen-medium) {
+    display: none;
+  }
+}
+
+.dot {
+  font-size: 0.5em;
+  margin-right: 0.3em;
+}
+
+.extraItemsText {
+  font-size: 0.5em;
+  opacity: 0.7;
+  display: none;
+
+  @media (--screen-medium) {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "@lyra/block-content-to-html",
+  "description": "Function for transforming Lyra block content to HTML",
+  "version": "0.2.6",
+  "main": "lib/blocksToHtml.js",
+  "umd": "umd/blocksToHtml.min.js",
+  "unpkg": "umd/blocksToHtml.min.js",
+  "scripts": {
+    "browserify": "NODE_ENV=production BROWSERIFY_ENV=build DEBUG='' browserify -t envify -g uglifyify lib/blocksToHtml.js -o umd/blocksToHtml.js --standalone=blocksToHtml",
+    "build": "npm run clean && npm run compile && npm run browserify && npm run minify",
+    "watch": "npm run compile -- --watch",
+    "clean": "rimraf lib coverage .nyc_output umd/*.js",
+    "compile": "babel --source-maps --copy-files -d lib/ src/",
+    "coverage": "npm test -- --coverage",
+    "minify": "uglifyjs -c -m -- umd/blocksToHtml.js > umd/blocksToHtml.min.js",
+    "postpublish": "npm run clean",
+    "posttest": "eslint .",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "block-content-to-html"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@lyra/block-content-to-hyperscript": "0.2.6"
+  },
+  "devDependencies": {
+    "@lyra/block-content-tests": "^0.2.5",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.5",
+    "babel-preset-env": "^1.7.0",
+    "browserify": "^16.2.2",
+    "envify": "^4.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-sanity": "^3.0.1",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.4.2",
+    "prettier": "^1.14.2",
+    "rimraf": "^2.6.2",
+    "uglify-js": "^3.4.8",
+    "uglifyify": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "jest": {
+    "testURL": "http://localhost",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

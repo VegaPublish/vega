@@ -1,0 +1,59 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+:root {
+  --progress-bar-height: 1em;
+}
+
+.root {
+  border: 1px solid var(--brand-darkest);
+  box-sizing: border-box;
+  border-radius: var(--border-radius-small);
+  height: var(--progress-bar-height);
+  width: 100%;
+  clear: both;
+}
+
+.inner {
+  width: 100%;
+  position: relative;
+}
+
+.completed {
+  composes: root;
+  border-color: var(--state-success-color);
+}
+
+.uncompleted {
+  composes: root;
+}
+
+.barContainer {
+  position: relative;
+  width: 100%;
+  height: var(--progress-bar-height);
+  padding: 0.1em 0.1em;
+  box-sizing: border-box;
+}
+
+.bar {
+  background-color: var(--brand-darkest);
+  border-radius: var(--border-radius-small);
+  height: calc(var(--progress-bar-height) - 0.35em);
+  transition-property: width;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  max-width: 100%;
+
+  @nest .completed & {
+    background-color: var(--state-success-color);
+  }
+}
+
+.percent {
+  float: right;
+}
+
+.text,
+.percent {
+  font-size: var(--font-size-xsmall);
+}

@@ -1,0 +1,5 @@
+{
+  "en-US": {
+    "@lyra/form-builder.errors.fieldIsRequired": "This field is required"
+  }
+}

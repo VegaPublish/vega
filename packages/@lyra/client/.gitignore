@@ -1,0 +1,16 @@
+# Logs
+*.log
+
+# Compiled files
+lib
+
+# Coverage directories used by tools like istanbul
+coverage
+.nyc_output
+
+# Dependency directories
+node_modules
+
+# UMD bundle
+umd
+

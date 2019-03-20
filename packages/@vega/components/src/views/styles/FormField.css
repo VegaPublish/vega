@@ -1,0 +1,14 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.actions {
+  display: flex;
+}
+
+.actions > * {
+  margin-right: 0.25em;
+}
+
+
+.withMarkerHighlight {
+  border-right: 2px solid var(--state-warning-color);
+}

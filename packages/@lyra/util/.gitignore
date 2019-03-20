@@ -1,0 +1,18 @@
+# Logs
+*.log
+
+# Compiled files
+/lib
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directories
+node_modules
+
+# Except for test
+!test/versionsFixture/node_modules
+
+# Built vendor files
+/vendor
+!/vendor/README.md

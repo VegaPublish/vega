@@ -1,0 +1,25 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: var(--small-padding);
+  background-color: var(--gray);
+  overflow: hidden;
+}
+
+.image {
+  composes: imagePlaceholder;
+}
+
+.time {
+  font-size: var(--font-size-xsmall--relative);
+  color: var(--gray-light);
+  margin-left: auto;
+}

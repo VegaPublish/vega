@@ -1,0 +1,40 @@
+{
+  "name": "@vega/utils",
+  "version": "0.2.6",
+  "description": "Common utilities",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf lib"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "utils"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@lyra/image-url": "0.2.6",
+    "@lyra/mutator": "^0.2.5",
+    "recompose": "^0.26.0",
+    "rxjs": "^6.2.0",
+    "shallow-equals": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "16.3.2"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

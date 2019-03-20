@@ -1,0 +1,8 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.menu {
+  position: fixed;
+  z-index: var(--zindex-portal);
+  left: 1rem;
+  top: 3rem;
+}

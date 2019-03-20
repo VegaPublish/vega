@@ -1,0 +1,71 @@
+{
+  "name": "@lyra/base",
+  "version": "0.2.8",
+  "description": "Lyra plugin containing the base components and roles for a Lyra configuration",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "coverage": "nyc --report=lcov --report=text _mocha -- test/**/*.test.js",
+    "prepublish": "in-publish && lyra-check || not-in-publish",
+    "test": "mocha test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "base"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "dependencies": {
+    "@lyra/client": "0.2.8",
+    "@lyra/document-store": "^0.2.5",
+    "@lyra/image-url": "0.2.6",
+    "@lyra/preview": "0.2.6",
+    "@lyra/schema": "^0.2.5",
+    "@lyra/state-router": "^0.2.5",
+    "@lyra/validation": "^0.2.5",
+    "history": "^4.6.3",
+    "in-publish": "^2.0.0",
+    "lodash": "^4.17.10",
+    "nano-pubsub": "^1.0.2",
+    "postcss-cssnext": "^3.0.2",
+    "promise-props": "^1.0.0",
+    "react-icons": "^2.2.7",
+    "react-intl": "^2.2.2",
+    "rxjs": "^6.2.0",
+    "semver-compare": "^1.0.0",
+    "shallow-equals": "^1.0.0"
+  },
+  "devDependencies": {
+    "@lyra/check": "^0.2.5",
+    "@lyra/plugin-loader": "0.2.6",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.0.1",
+    "nyc": "^11.0.3",
+    "prop-types": "^15.6.2",
+    "proxyquire": "^1.7.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "rimraf": "^2.6.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6 || ^16",
+    "react": "^16.2",
+    "react-dom": "^16.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

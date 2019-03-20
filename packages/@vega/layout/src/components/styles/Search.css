@@ -1,0 +1,107 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  color: inherit;
+  line-height: 1.5rem;
+  position: relative;
+}
+
+.input {
+  border: none;
+  outline: none;
+  color: inherit;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.25rem;
+  padding-left: 2rem;
+  line-height: inherit;
+  font-size: inherit;
+  box-sizing: border-box;
+
+  @nest &::placeholder {
+    color: inherit;
+    opacity: 0.4;
+  }
+}
+
+.inner {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.spinner {
+  color: inherit;
+  position: absolute;
+  margin: 3px;
+  top: 0;
+  right: 0;
+}
+
+.listContainer {
+  box-sizing: border-box;
+  background-color: color(var(--component-bg) a(95%));
+  color: var(--black);
+
+  @media (--screen-medium) {
+    composes: shadow-5dp from 'part:@lyra/base/theme/shadows-style';
+  }
+
+  @nest &:empty {
+    display: none;
+  }
+}
+
+.hits {
+  composes: resetList from 'part:@lyra/base/theme/layout/helpers';
+}
+
+.hit {
+  composes: resetListItem from 'part:@lyra/base/theme/layout/helpers';
+  background-color: transparent;
+  cursor: default;
+}
+
+.link {
+  composes: resetLink from 'part:@lyra/base/theme/layout/helpers';
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--small-padding);
+  box-sizing: border-box;
+
+  @nest &:hover {
+    background-color: color(var(--brand-primary) a(20%));
+  }
+
+  @nest &:active {
+    color: #fff;
+    background-color: color(var(--brand-primary) a(100%));
+  }
+}
+
+.preview {
+  display: block;
+  overflow: hidden;
+}
+
+.type {
+  padding: 0 1em;
+  color: var(--gray-light);
+}
+
+.activeLink {
+  composes: link;
+  background-color: var(--selected-item-color-hover);
+}
+
+.label {
+  font-size: inherit;
+  position: absolute;
+  left: 0.5rem;
+}
+
+.type {
+  font-size: var(--font-size-small);
+}

@@ -1,0 +1,15 @@
+@import 'part:@lyra/base/theme/responsive-style';
+@import 'part:@lyra/base/theme/variables/brand-colors-style';
+@import 'part:@lyra/base/theme/variables/code-style';
+@import 'part:@lyra/base/theme/variables/forms-style';
+@import 'part:@lyra/base/theme/variables/globals-style';
+@import 'part:@lyra/base/theme/variables/gray-colors-style';
+@import 'part:@lyra/base/theme/variables/layers-style';
+@import 'part:@lyra/base/theme/variables/list-style';
+@import 'part:@lyra/base/theme/variables/progress-style';
+@import 'part:@lyra/base/theme/variables/selectable-item-style';
+@import 'part:@lyra/base/theme/variables/state-colors-style';
+@import 'part:@lyra/base/theme/variables/typography-style';
+
+/* custom */
+@import 'part:@lyra/base/theme/variables/override-style';

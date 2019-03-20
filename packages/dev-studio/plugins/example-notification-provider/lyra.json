@@ -1,0 +1,24 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@vega/attention/notification-provider",
+      "path": "notifications.js"
+    },
+    {
+      "implements": "part:@vega/attention/notification-provider",
+      "path": "right-clicks-notifications.js"
+    },
+    {
+      "implements": "part:@vega/attention/notification-provider",
+      "path": "left-clicks-notifications.js"
+    },
+    {
+      "implements": "part:@vega/attention/notification-provider",
+      "path": "requires-action.js"
+    }
+  ]
+}

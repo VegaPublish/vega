@@ -1,0 +1,12 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@vega/attention/notification-provider",
+      "path": "index.js"
+    }
+  ]
+}

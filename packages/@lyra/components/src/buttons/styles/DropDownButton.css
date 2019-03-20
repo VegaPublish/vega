@@ -1,0 +1,30 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  position: relative;
+  display: inline-block;
+  composes: spacing from 'part:@lyra/components/buttons/default-style';
+}
+
+.button {
+  position: relative;
+}
+
+.title {
+  padding-right: 1em;
+}
+
+.arrow {
+  @nest & svg {
+    transform: scale(1.5);
+  }
+}
+
+.menu {
+  width: 100%;
+}
+
+.popper {
+  position: relative;
+  z-index: var(--zindex-portal);
+}

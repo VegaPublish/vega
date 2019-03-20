@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  position: relative;
+}
+
+.communicator {
+  border-left: 1px solid #555;
+  flex-basis: 25rem;
+  position: relative;
+}

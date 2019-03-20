@@ -1,0 +1,60 @@
+{
+  "name": "@lyra/import",
+  "version": "0.2.8",
+  "description": "Import documents to a Lyra dataset",
+  "main": "lib/import.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test": "jest"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "import"
+  ],
+  "dependencies": {
+    "@lyra/mutator": "^0.2.5",
+    "@lyra/uuid": "0.2.8",
+    "debug": "^3.1.0",
+    "file-url": "^2.0.2",
+    "fs-extra": "^6.0.1",
+    "get-uri": "^2.0.2",
+    "globby": "^8.0.0",
+    "gunzip-maybe": "^1.4.1",
+    "is-tar": "^1.0.0",
+    "lodash": "^4.17.10",
+    "mississippi": "^2.0.0",
+    "p-map": "^1.2.0",
+    "peek-stream": "^1.1.2",
+    "split2": "^2.1.1",
+    "tar-fs": "^1.16.0"
+  },
+  "devDependencies": {
+    "@lyra/client": "0.2.8",
+    "get-it": "^4.0.1",
+    "jest": "^23.4.2",
+    "rimraf": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "jest": {
+    "testURL": "http://localhost"
+  },
+  "homepage": "http://vegapublish.com/",
+  "publishConfig": {
+    "access": "public"
+  }
+}

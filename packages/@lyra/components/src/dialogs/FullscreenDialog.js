@@ -1,0 +1,121 @@
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import styles from 'part:@lyra/components/dialogs/fullscreen-style'
+import CloseIcon from 'part:@lyra/base/close-icon'
+import Button from 'part:@lyra/components/buttons/default'
+import ButtonCollection from 'part:@lyra/components/buttons/button-collection'
+import {partition} from 'lodash'
+import {Portal} from 'part:@lyra/components/utilities/portal'
+import StackedEscapable from 'part:@lyra/components/utilities/stacked-escapable'
+
+export default class FullScreenDialog extends React.PureComponent {
+  static propTypes = {
+    color: PropTypes.oneOf(['default', 'warning', 'info', 'success', 'danger']),
+    className: PropTypes.string,
+    title: PropTypes.string,
+    children: PropTypes.node,
+    onClose: PropTypes.func,
+    isOpen: PropTypes.bool,
+    centered: PropTypes.bool,
+    onAction: PropTypes.func,
+    actions: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        tooltip: PropTypes.string,
+        kind: PropTypes.string,
+        autoFocus: PropTypes.bool
+      })
+    )
+  }
+
+  static defaultProps = {
+    color: 'default',
+    isOpen: false,
+    showHeader: false,
+    onAction() {},
+    onOpen() {},
+    onClose() {},
+    actions: []
+  }
+
+  handleActionClick = event => {
+    const actionIndex = event.currentTarget.getAttribute('data-action-index')
+    this.props.onAction(this.props.actions[actionIndex])
+  }
+
+  createActionButton = (action, i) => {
+    const {color} = this.props
+    return (
+      <Button
+        key={i}
+        onClick={this.handleActionClick}
+        data-action-index={i}
+        color={color === 'default' ? action.color : 'white'}
+        disabled={action.disabled}
+        inverted={color !== 'default'} // invert buttons for colored dialogs
+        kind={action.kind}
+        autoFocus={action.autoFocus}
+      >
+        {action.title}
+      </Button>
+    )
+  }
+
+  render() {
+    const {
+      color,
+      title,
+      className,
+      onClose,
+      centered,
+      isOpen,
+      actions
+    } = this.props
+
+    const classNames = [
+      styles[color] || styles.default,
+      isOpen ? styles.isOpen : styles.isClosed,
+      className,
+      centered && styles.centered
+    ]
+      .filter(Boolean)
+      .join(' ')
+
+    const [primary, secondary] = partition(actions, action => action.primary)
+
+    return (
+      <StackedEscapable onEscape={onClose}>
+        <Portal>
+          <div className={classNames}>
+            {onClose && (
+              <button
+                className={styles.closeButton}
+                onClick={onClose}
+                type="button"
+              >
+                <CloseIcon color="inherit" />
+              </button>
+            )}
+            <div className={styles.inner}>
+              <h1 className={styles.heading}>{title}</h1>
+              <div className={styles.content}>
+                {this.props.children}
+                <div className={styles.actionsWrapper}>
+                  {actions.length > 0 && (
+                    <ButtonCollection
+                      align="start"
+                      secondary={secondary.map(this.createActionButton)}
+                    >
+                      {primary.map(this.createActionButton)}
+                    </ButtonCollection>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </Portal>
+      </StackedEscapable>
+    )
+  }
+}

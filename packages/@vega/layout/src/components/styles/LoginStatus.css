@@ -1,0 +1,38 @@
+@import 'part:@lyra/base/theme/variables-style';
+@import 'part:@lyra/base/theme/body-style';
+
+.root {
+  display: block;
+  text-align: center;
+
+  @media (--screen-medium) {
+    text-align: left;
+    line-height: var(--header-height);
+  }
+}
+
+.portal {
+  z-index: var(--zindex-portal);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.userImage {
+  border-radius: 50%;
+  display: block;
+  height: 2rem;
+  width: 2rem;
+}
+
+.userName {
+  @media (--screen-medium) {
+    display: inline-block;
+  }
+}
+
+.logoutButton {
+  @media (--screen-medium) {
+    display: inline-block;
+  }
+}

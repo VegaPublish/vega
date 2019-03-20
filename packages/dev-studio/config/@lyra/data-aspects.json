@@ -1,0 +1,13 @@
+{
+  "typeOptions": {
+    "issue": {
+      "displayName": "Issues"
+    },
+    "stage": {
+      "displayName": "Stages"
+    },
+    "track": {
+      "displayName": "Tracks"
+    }
+  }
+}

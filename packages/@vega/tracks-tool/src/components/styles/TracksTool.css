@@ -1,0 +1,45 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  padding: var(--medium-padding);
+}
+
+.main {
+  box-sizing: border-box;
+  height: 100%;
+  flex-grow: 1;
+  width: 65vw;
+}
+
+.communicator {
+  transition: width 0.2s linear;
+}
+
+.communicatorOpen {
+  composes: communicator;
+  width: 30vw;
+}
+
+.communicatorClosed {
+  composes: communicator;
+  width: 0;
+}
+
+.toggleCommunicatorButton {
+  position: absolute;
+  right: 4px;
+  top: 0px;
+  z-index: 200;
+}
+
+.communicatorIcon {
+  background-color: color(white a(95%));
+  border-radius: 1px;
+  height: 3rem;
+  width: 3rem;
+  opacity: 0.7;
+
+  @nest &:hover {
+    opacity: 1;
+  }
+}

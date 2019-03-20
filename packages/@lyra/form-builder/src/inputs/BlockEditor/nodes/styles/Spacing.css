@@ -1,0 +1,27 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.default {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.default + .default {
+  padding-top: var(--medium-padding);
+}
+
+.xsmallToxSmall + .xsmallToxSmall {
+  padding-top: 0.25rem;
+}
+
+.smallToSmall + .smallToSmall {
+  padding-top: 0.8rem;
+}
+
+.largeToLarge + .largeToLarge {
+  padding-top: var(--large-padding);
+}
+
+.noneToNone + .noneToNone {
+  padding-top: 0;
+}

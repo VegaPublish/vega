@@ -1,0 +1,21 @@
+.root {
+  overflow: hidden;
+  @nest &:hover {
+    background-color: #eee;
+  }
+}
+
+.title {
+  display: block;
+  width: 10em;
+  float: left;
+  clear: left;
+}
+
+.content {
+  display: block;
+  width: calc(100% - 10em);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

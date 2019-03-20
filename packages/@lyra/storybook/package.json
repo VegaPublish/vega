@@ -1,0 +1,38 @@
+{
+  "name": "@lyra/storybook",
+  "version": "0.2.6",
+  "description": "Lyra plugin for running react-storybook in a Lyra studio",
+  "main": "./lib/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "storybook"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "dependencies": {
+    "@lyra/server": "0.2.6",
+    "@lyra/webpack-integration": "^0.2.5",
+    "@storybook/addon-knobs": "^3.2.8",
+    "@storybook/addons": "^3.2.6",
+    "@storybook/react": "3.2.8",
+    "normalize.css": "^5.0.0",
+    "react-addons-create-fragment": "^15.4.2",
+    "shelljs": "^0.7.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,22 @@
+/* line-height: 1.428571429; */
+
+.root {
+  display: inline-block;
+  line-height: 1em;
+  position: relative;
+}
+
+.media {
+  display: inline;
+  position: relative;
+
+  @nest & img {
+    height: 1em;
+    display: inline;
+    object-fit: cover;
+  }
+
+  @nest & div {
+    display: inline;
+  }
+}

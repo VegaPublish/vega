@@ -1,0 +1,42 @@
+{
+  "name": "@vega/core",
+  "version": "0.2.8",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf lib"
+  },
+  "dependencies": {
+    "@lyra/image-url": "0.2.6",
+    "@lyra/uuid": "0.2.8",
+    "@vega/components": "0.2.6",
+    "@vega/utils": "0.2.6",
+    "js-video-url-parser": "^0.2.7",
+    "lodash": "^4.17.10",
+    "rxjs": "^6.2.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "core"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

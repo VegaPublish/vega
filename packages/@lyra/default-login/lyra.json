@@ -1,0 +1,33 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+
+  "parts": [
+    {
+      "name": "part:@lyra/base/login-dialog-content",
+      "description": "React component which renders login page and available providers"
+    },
+    {
+      "implements": "part:@lyra/base/login-wrapper",
+      "path": "LoginWrapper.js"
+    },
+    {
+      "implements": "part:@lyra/base/login-dialog",
+      "path": "LoginDialog.js"
+    },
+    {
+      "implements": "part:@lyra/base/login-dialog-content",
+      "path": "LoginDialogContent.js"
+    },
+    {
+      "implements": "part:@lyra/base/authentication-fetcher",
+      "path": "authenticationFetcher.js"
+    },
+    {
+      "implements": "part:@lyra/base/locale-messages",
+      "path": "./locale/en-US.json"
+    }
+  ]
+}

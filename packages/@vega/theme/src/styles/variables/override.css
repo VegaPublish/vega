@@ -1,0 +1,17 @@
+:root {
+  --brand-darkest: #000;
+  --brand-lightest: #fff;
+  --gray-base: #232e2d;
+
+  --brand-primary: #26a69a;
+  --brand-secondary: #f43;
+
+  --state-success-color: #19b366;
+  --state-danger-color: #f43;
+
+  --component-bg: #fff;
+
+  --border-radius-base: 0;
+  --border-radius-large: 0;
+  --border-radius-small: 0;
+}

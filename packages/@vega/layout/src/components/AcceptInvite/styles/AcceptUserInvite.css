@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+  min-height: 100vh;
+
+  @nest & > div {
+    max-width: 30rem;
+  }
+}

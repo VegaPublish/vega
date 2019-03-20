@@ -1,0 +1,56 @@
+{
+  "name": "@lyra/vision",
+  "version": "0.2.8",
+  "description": "React-based data management tool for Lyra projects",
+  "main": "lib/LyraVision.js",
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "vision"
+  ],
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "json-lexer": "^1.1.1",
+    "moment": "^2.19.1",
+    "query-string": "^4.3.2",
+    "react-codemirror2": "^1.0.0",
+    "react-icon-base": "^2.0.4",
+    "react-json-inspector": "^7.1.1",
+    "react-spinner": "^0.2.6",
+    "react-split-pane": "^0.1.63"
+  },
+  "devDependencies": {
+    "@lyra/base": "0.2.8",
+    "@lyra/check": "^0.2.5",
+    "@lyra/client": "0.2.8",
+    "@lyra/components": "0.2.8",
+    "@lyra/default-layout": "0.2.8",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6 || ^16",
+    "react": "^16.2",
+    "react-dom": "^16.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@lyra/export",
+  "version": "0.2.8",
+  "description": "Export Lyra documents and assets",
+  "main": "lib/export.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test": "jest"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "export"
+  ],
+  "dependencies": {
+    "archiver": "^2.1.1",
+    "debug": "^3.1.0",
+    "fs-extra": "^6.0.1",
+    "lodash": "^4.17.10",
+    "mississippi": "^2.0.0",
+    "p-queue": "^2.3.0",
+    "simple-get": "^3.0.2",
+    "split2": "^2.1.1"
+  },
+  "devDependencies": {
+    "@lyra/client": "0.2.8",
+    "decompress": "^4.2.0",
+    "jest": "^23.4.2",
+    "rimraf": "^2.6.2",
+    "string-to-stream": "^1.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "testURL": "http://localhost"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/"
+}

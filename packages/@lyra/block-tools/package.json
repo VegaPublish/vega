@@ -1,0 +1,58 @@
+{
+  "name": "@lyra/block-tools",
+  "version": "0.2.5",
+  "description": "Can format HTML, Slate JSON or Lyra block array into any other format.",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "compile": "babel src --copy-files --out-dir lib",
+    "compile:watch": "npm run compile -- --watch",
+    "test": "echo 'FIXME': figure out why tests fail #NODE_ENV=test jest",
+    "coverage": "NODE_ENV=test jest --coverage",
+    "typecheck": "flow check"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupTestFrameworkScriptFile": "./test/setup.js",
+    "collectCoverageFrom": [
+      "src/**.js"
+    ]
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "block-tools"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "dependencies": {
+    "get-random-values": "^1.2.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@lyra/schema": "^0.2.5",
+    "assert": "^1.4.1",
+    "in-publish": "^2.0.0",
+    "jest": "^23.4.2",
+    "jest-cli": "^23.4.2",
+    "jsdom": "^11.3.0",
+    "xpath": "^0.0.24"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/"
+}

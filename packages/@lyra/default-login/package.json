@@ -1,0 +1,42 @@
+{
+  "name": "@lyra/default-login",
+  "version": "0.2.5",
+  "description": "Lets the user log in to Lyra.",
+  "main": "lib/index.js",
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "prepublish": "in-publish && lyra-check || not-in-publish",
+    "test": "lyra-check"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "default-login"
+  ],
+  "dependencies": {
+    "@lyra/generate-help-url": "^0.2.5",
+    "in-publish": "^2.0.0",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "@lyra/check": "^0.2.5",
+    "@lyra/resolver": "^0.2.5",
+    "rimraf": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "publishConfig": {
+    "access": "public"
+  }
+}

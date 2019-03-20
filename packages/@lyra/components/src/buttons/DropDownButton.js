@@ -1,0 +1,135 @@
+/* eslint-disable complexity */
+import PropTypes from 'prop-types'
+import React from 'react'
+import styles from 'part:@lyra/components/buttons/dropdown-style'
+import Button from 'part:@lyra/components/buttons/default'
+import ArrowIcon from 'part:@lyra/base/angle-down-icon'
+import Menu from 'part:@lyra/components/menus/default'
+import {omit} from 'lodash'
+import {Manager, Target, Popper} from 'react-popper'
+import Stacked from 'part:@lyra/components/utilities/stacked'
+import Escapable from 'part:@lyra/components/utilities/escapable'
+import {Portal} from 'part:@lyra/components/utilities/portal'
+
+export default class DropDownButton extends React.PureComponent {
+  static propTypes = {
+    kind: PropTypes.oneOf([
+      'secondary',
+      'add',
+      'delete',
+      'warning',
+      'success',
+      'danger',
+      'simple'
+    ]),
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        icon: PropTypes.func
+      })
+    ),
+    onAction: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired,
+    inverted: PropTypes.bool,
+    icon: PropTypes.func,
+    loading: PropTypes.bool,
+    ripple: PropTypes.bool,
+    colored: PropTypes.bool,
+    color: PropTypes.string,
+    className: PropTypes.string,
+    origin: PropTypes.oneOf(['left', 'right'])
+  }
+
+  static defaultProps = {
+    origin: 'left'
+  }
+
+  state = {
+    menuOpened: false,
+    width: 100
+  }
+
+  handleClose = () => {
+    this.setState({menuOpened: false})
+  }
+
+  setRootElement = element => {
+    this._rootElement = element
+    if (element) {
+      this.width = element.offsetWidth
+    }
+  }
+
+  setMenuElement = element => {
+    this._menuElement = element
+  }
+
+  handleOnClick = event => {
+    this.setState({
+      menuOpened: true,
+      width: event.target.offsetWidth
+    })
+  }
+
+  handleClickOutside = event => {
+    if (this._rootElement && this._rootElement.contains(event.target)) {
+      // Stop the open button from being clicked
+      event.stopPropagation()
+      this.handleClose()
+    } else {
+      this.handleClose()
+    }
+  }
+
+  handleAction = item => {
+    this.props.onAction(item)
+    this.handleClose()
+  }
+
+  render() {
+    const {items, children, kind, className, origin, ...rest} = omit(
+      this.props,
+      'onAction'
+    )
+    const {menuOpened, width} = this.state
+
+    return (
+      <div ref={this.setRootElement} className={`${styles.root} ${className}`}>
+        <Manager>
+          <Target>
+            <Button {...rest} onClick={this.handleOnClick} kind={kind}>
+              <span className={styles.title}>{children}</span>
+              <span className={styles.arrow}>
+                <ArrowIcon color="inherit" />
+              </span>
+            </Button>
+          </Target>
+          {menuOpened && (
+            <Portal>
+              <Stacked>
+                {isActive => (
+                  <Popper className={styles.popper}>
+                    <div
+                      className={styles.wrapper}
+                      ref={this.setMenuElement}
+                      style={{minWidth: `${width}px`}}
+                    >
+                      <Escapable onEscape={isActive && this.handleClose} />
+                      <Menu
+                        items={items}
+                        isOpen
+                        className={styles.menu}
+                        onAction={this.handleAction}
+                        onClickOutside={isActive && this.handleClickOutside}
+                      />
+                    </div>
+                  </Popper>
+                )}
+              </Stacked>
+            </Portal>
+          )}
+        </Manager>
+      </div>
+    )
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "@vega/review-tool",
+  "version": "0.2.8",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf lib"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "review-tool"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@lyra/base": "0.2.8",
+    "@lyra/block-content-to-react": "0.2.6",
+    "@lyra/uuid": "0.2.8",
+    "@vega/components": "0.2.6",
+    "@vega/core": "0.2.8",
+    "@vega/utils": "0.2.6",
+    "adjectives": "^1.0.2",
+    "animals": "^0.0.3",
+    "humanize-list": "^1.0.1",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-props-stream": "^1.0.0"
+  },
+  "devDependencies": {
+    "prop-types": "^15.6.2",
+    "rimraf": "^2.6.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

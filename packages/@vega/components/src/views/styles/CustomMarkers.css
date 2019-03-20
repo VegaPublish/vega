@@ -1,0 +1,20 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.link {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+
+  @nest &:hover {
+    background-color: #ddd;
+  }
+}
+
+.pointerList {
+  text-align: left;
+}
+.pointerList li {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-bottom: var(--small-padding);
+}

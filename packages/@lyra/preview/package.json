@@ -1,0 +1,51 @@
+{
+  "name": "@lyra/preview",
+  "version": "0.2.6",
+  "description": "Utilities for previewing content in Lyra",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "compile": "babel src --copy-files --out-dir lib",
+    "compile:watch": "npm run compile -- --watch",
+    "test": "#jest",
+    "test:watch": "jest --watchAll",
+    "typecheck": "flow check"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "preview"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "dependencies": {
+    "@lyra/image-url": "0.2.6",
+    "lodash": "^4.17.10",
+    "observable-props": "^2.0.0",
+    "rxjs": "^6.2.0",
+    "shallow-equals": "^1.0.0"
+  },
+  "devDependencies": {
+    "empty": "^0.10.1",
+    "flow-typed": "^2.4.0",
+    "jest": "^23.4.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6 || ^16",
+    "react": "^16"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  }
+}

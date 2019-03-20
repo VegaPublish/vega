@@ -1,0 +1,50 @@
+{
+  "name": "@lyra/plugin-loader",
+  "version": "0.2.6",
+  "description": "Monkey-patches node's require algorithm to allow requiring of Lyra parts",
+  "main": "loader.js",
+  "scripts": {
+    "test": "ava",
+    "coverage": "nyc --reporter=html ava"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "plugin-loader"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "ava": {
+    "files": [
+      "test/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "nyc": "^11.0.3"
+  },
+  "dependencies": {
+    "@lyra/resolver": "^0.2.5",
+    "@lyra/util": "^0.2.5",
+    "@lyra/webpack-integration": "^0.2.5",
+    "css-modules-require-hook": "4.1.0",
+    "interop-require": "^1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

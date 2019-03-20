@@ -1,0 +1,28 @@
+[
+  {
+    "_type": "block",
+    "children": [
+      {"_type": "span", "marks": ["strong"], "text": "Hei"},
+      {"_type": "span", "marks": ["code"], "text": "const foo = 'bar'"}
+    ],
+    "markDefs": [],
+    "style": "normal"
+  },
+  {
+    "_type": "block",
+    "children": [
+      {"_type": "span", "marks": [], "text": "Quote "},
+      {"_type": "span", "marks": ["strong"], "text": "with emphasis"},
+      {"_type": "span", "marks": [], "text": "\n\n"},
+      {"_type": "span", "marks": ["strong"], "text": "Emphasis!"}
+    ],
+    "markDefs": [],
+    "style": "blockquote"
+  },
+  {
+    "_type": "block",
+    "children": [{"_type": "image", "src": "http://image.gif"}],
+    "markDefs": [],
+    "style": "normal"
+  }
+]

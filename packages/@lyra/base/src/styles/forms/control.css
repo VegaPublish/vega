@@ -1,0 +1,9 @@
+@import 'part:@lyra/base/theme/variables/globals-style';
+
+.root {
+  box-sizing: border-box;
+}
+
+.inner {
+  position: relative;
+}

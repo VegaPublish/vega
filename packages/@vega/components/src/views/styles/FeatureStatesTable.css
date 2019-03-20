@@ -1,0 +1,57 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #000;
+  cursor: pointer;
+}
+
+.head {
+  display: none;
+}
+
+.cell {
+  border-bottom: 1px solid #000;
+  padding: var(--small-padding) 0;
+
+  @nest .row:hover & {
+    background-color: #eee;
+  }
+}
+
+.needsAttention {
+  composes: cell;
+  width: 3rem;
+  color: red;
+  text-align: center;
+}
+
+.titleCell {
+  composes: cell;
+  font-weight: 500;
+}
+
+.descriptionCell {
+  composes: cell;
+  font-weight: 300;
+}
+
+.functionsCell {
+  font-size: var(--font-size-small);
+  composes: cell;
+  text-align: right;
+}
+
+.functions {
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
+.advanceCheckbox {
+  margin: 12px 12px 10px 8px;
+}
+
+.finalStageReachedCell {
+  cursor: default;
+}

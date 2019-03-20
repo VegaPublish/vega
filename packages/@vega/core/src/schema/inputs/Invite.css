@@ -1,0 +1,12 @@
+.description {
+  composes: description from 'part:@lyra/base/theme/typography/text-blocks-style';
+  margin-bottom: 1rem;
+}
+
+.buttonCollection {
+  display: flex;
+
+  @nest & > *:not(:first-child) {
+    margin-left: 0.5em;
+  }
+}

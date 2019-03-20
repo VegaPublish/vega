@@ -1,0 +1,46 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.error {
+  display: block;
+  justify-content: center;
+  margin: 0 10px;
+
+  @media (--screen-default) {
+    display: flex;
+  }
+}
+
+.errorSplash {
+  flex: 0.4;
+  max-width: 400px;
+  text-align: center;
+  min-width: 212px;
+  margin: 20px auto;
+
+  @media (--screen-default) {
+    margin: 20px 0;
+  }
+}
+
+.errorSplash svg {
+  max-height: 35vh;
+
+  @media (--screen-default) {
+    max-height: 50vh;
+  }
+}
+
+.errorDetails {
+  flex: 1;
+  overflow: auto;
+  max-width: 800px;
+}
+
+.errorStackTrace,
+.errorComponentStack {
+  font-size: 0.9em;
+}
+
+.errorActionButton button {
+  margin: 0 5px;
+}

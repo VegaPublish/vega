@@ -1,0 +1,118 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  color: inherit;
+  line-height: 3em;
+  position: relative;
+  height: 3rem;
+}
+
+.inner {
+  display: block;
+}
+
+.input {
+  border: none;
+  outline: none;
+  color: inherit;
+  width: 100%;
+  height: 3em;
+  line-height: 2rem;
+  padding: 0.5rem;
+  padding-left: 2.5rem;
+  background-color: transparent;
+  font-size: inherit;
+  display: block;
+
+  @nest &::placeholder {
+    color: inherit;
+    opacity: 0.4;
+  }
+
+  @nest &:hover::placeholder {
+    opacity: 1;
+  }
+}
+
+.result {
+  composes: shadow-10dp from 'part:@lyra/base/theme/shadows-style';
+  position: absolute;
+  min-height: 8rem;
+  z-index: var(--zindex-dropdown);
+  top: 3rem;
+  width: 100vw;
+  background-color: var(--component-bg);
+  box-sizing: border-box;
+  left: 0;
+  padding: 0;
+
+  @media (--screen-medium) {
+    padding-bottom: 0;
+    width: 40rem;
+    max-width: 100%;
+    max-height: 100vh;
+    min-height: initial;
+  }
+}
+
+.noHits {
+  box-sizing: border-box;
+  margin: 2rem;
+  text-align: center;
+  color: var(--text-color-secondary);
+
+  @nest & strong {
+    color: var(--text-color);
+  }
+}
+
+.listContainer {
+  composes: scrollY from 'part:@lyra/base/theme/layout/scrolling-style';
+}
+
+.hits {
+  color: var(--text-color);
+  composes: resetList from 'part:@lyra/base/theme/layout/helpers';
+  width: 100%;
+}
+
+.hit {
+  composes: resetListItem from 'part:@lyra/base/theme/layout/helpers';
+  background-color: transparent;
+  cursor: default;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.link {
+  composes: resetLink from 'part:@lyra/base/theme/layout/helpers';
+  composes: listItemStates from 'part:@lyra/base/theme/layout/backgrounds-style';
+  display: block;
+  padding: var(--small-padding);
+}
+
+.activeLink {
+  composes: link;
+  background-color: var(--selected-item-color-hover);
+}
+
+.spinner {
+  composes: absoluteCenter from 'part:@lyra/base/theme/layout/positioning-style';
+}
+
+.itemType {
+  position: absolute;
+  top: 50%;
+  color: var(--gray);
+  right: var(--small-padding);
+  text-transform: uppercase;
+  font-size: var(--font-size-tiny);
+  transform: translateY(-50%);
+}
+
+.label {
+  position: absolute;
+  left: 1rem;
+  top: -0.1rem;
+  font-size: 0.9rem;
+}

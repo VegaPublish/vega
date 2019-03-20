@@ -1,0 +1,13 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  margin-bottom: var(--large-padding);
+  font-size: var(--font-size-small);
+}
+
+.responses {
+  margin-left: var(--medium-padding);
+  padding-left: var(--small-padding);
+  border-left: 2px solid var(--brand-primary);
+  font-size: var(--font-size-xsmall);
+}

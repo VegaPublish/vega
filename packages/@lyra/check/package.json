@@ -1,0 +1,47 @@
+{
+  "name": "@lyra/check",
+  "version": "0.2.5",
+  "description": "Lyra check Lyra plugins and projects",
+  "main": "src/lyraCheck.js",
+  "bin": {
+    "lyra-check": "./src/bin.js"
+  },
+  "author": "Vega <hello@vegapublish.com>",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "in-publish && ./src/bin.js || not-in-publish"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "check"
+  ],
+  "dependencies": {
+    "@lyra/generate-help-url": "^0.2.5",
+    "@lyra/resolver": "^0.2.5",
+    "chalk": "^2.4.0",
+    "fs-extra": "^6.0.1",
+    "in-publish": "^2.0.0",
+    "promise-props-recursive": "^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "publishConfig": {
+    "access": "public"
+  }
+}

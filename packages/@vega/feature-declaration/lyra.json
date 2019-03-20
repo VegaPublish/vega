@@ -1,0 +1,12 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@vega/stage-feature",
+      "path": "declaration.js"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "name": "part:@lyra/form-builder/input/code",
+      "description": "An editor for code in lyra"
+    },
+    {
+      "implements": "part:@lyra/form-builder/input/code",
+      "path": "CodeInput.js"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/code/schema",
+      "description": "An editor for code in lyra"
+    },
+    {
+      "implements": "part:@lyra/form-builder/input/code/schema",
+      "path": "schema.js"
+    }
+  ]
+}

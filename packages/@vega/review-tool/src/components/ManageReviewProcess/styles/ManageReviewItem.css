@@ -1,0 +1,53 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--medium-padding);
+}
+
+.reviewItem {
+  background-color: var(--component-bg);
+  padding: var(--medium-padding);
+  margin-bottom: var(--medium-padding);
+}
+
+.statusCollection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.8em;
+}
+
+.reviewerName {
+}
+
+.status {
+  color: var(--gray-light);
+  margin: 4px;
+  white-space: nowrap;
+}
+
+.pending {
+  composes: status;
+  color: var(--state-danger-color);
+}
+
+.accepted {
+  composes: status;
+  color: var(--state-success-color);
+}
+
+.collapse {
+  display: flex;
+  cursor: pointer;
+  padding-top: var(--medium-padding);
+}
+
+.collapsedPointer {
+  margin-right: 0.5em;
+}

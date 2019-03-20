@@ -1,0 +1,46 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 300;
+  min-height: 3rem;
+}
+
+.projectName {
+  display: block;
+  font-size: var(--font-size-tiny);
+  font-weight: 300;
+  color: var(--white);
+  padding: var(--small-padding);
+  margin: 0;
+  text-align: center;
+}
+
+.link {
+  composes: noLink from 'part:@lyra/base/theme/layout/helpers';
+}
+
+.brandLogoContainer {
+  z-index: 10;
+  cursor: pointer;
+  color: #fff;
+  padding: var(--medium-padding);
+
+  @media (--screen-medium) {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  @nest & svg {
+    fill: #fff;
+    height: 1rem;
+    width: auto;
+
+    @media (--screen-medium) {
+      height: auto;
+    }
+  }
+}

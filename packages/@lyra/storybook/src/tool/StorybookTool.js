@@ -1,0 +1,53 @@
+import React, {PureComponent} from 'react'
+import config from 'config:@lyra/storybook'
+
+const styles = {
+  border: 0,
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  display: 'block',
+  boxSizing: 'border-box'
+}
+
+export default class StorybookTool extends PureComponent {
+  constructor(props) {
+    super(props)
+
+    this.state = {styles}
+  }
+
+  assignRef = ref => {
+    this.iframe = ref
+  }
+
+  positionAbsolute = () => {
+    this.setState(() => ({
+      styles: Object.assign({}, styles, {position: 'absolute'})
+    }))
+  }
+
+  componentDidMount() {
+    if (this.iframe.parentNode.getAttribute('id') !== 'lyra') {
+      return
+    }
+
+    this.raf = requestAnimationFrame(this.positionAbsolute)
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf)
+  }
+
+  render() {
+    return (
+      <iframe
+        ref={this.assignRef}
+        src={`http://localhost:${config.port}/`}
+        style={this.state.styles}
+      />
+    )
+  }
+}

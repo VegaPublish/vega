@@ -1,0 +1,111 @@
+import path from 'path'
+import fse from 'fs-extra'
+import {union, difference} from 'lodash'
+import debug from '../../debug'
+import versionRanges from '../../versionRanges'
+import resolveLatestVersions from '../../util/resolveLatestVersions'
+import {createPackageManifest, createLyraManifest} from './createManifest'
+import templates from './templates'
+
+export default async (opts, context) => {
+  const {output, cliRoot} = context
+  const templatesDir = path.join(cliRoot, 'templates')
+  const sourceDir = path.join(templatesDir, opts.template)
+  const outputDir = opts.outputDir
+
+  // Check that we have a template info file (dependencies, plugins etc)
+  const template = templates[opts.template]
+  if (!template) {
+    throw new Error(`Template "${opts.template}" not defined`)
+  }
+
+  // Copy template files
+  debug('Copying files from template "%s" to "%s"', opts.template, outputDir)
+  let spinner = output.spinner('Bootstrapping files from template').start()
+  await fse.copy(sourceDir, outputDir, {
+    overwrite: false,
+    errorOnExist: true
+  })
+  spinner.succeed()
+
+  // Merge global and template-specific plugins and dependencies
+  const allModules = Object.assign(
+    {},
+    versionRanges.core,
+    template.dependencies || {}
+  )
+  const modules = union(
+    Object.keys(versionRanges.core),
+    Object.keys(template.dependencies || {})
+  )
+
+  // Resolve latest versions of Lyra-dependencies
+  spinner = output.spinner('Resolving latest module versions').start()
+  const firstParty = modules.filter(isFirstParty)
+  const thirdParty = difference(modules, firstParty)
+  const firstPartyVersions = await resolveLatestVersions(firstParty, {
+    asRange: true
+  })
+  const thirdPartyVersions = thirdParty.reduce((acc, dep) => {
+    acc[dep] = allModules[dep]
+    return acc
+  }, {})
+  const dependencies = Object.assign({}, firstPartyVersions, thirdPartyVersions)
+  spinner.succeed()
+
+  // Now create a package manifest (`package.json`) with the merged dependencies
+  spinner = output.spinner('Creating default project files').start()
+  const packageManifest = await createPackageManifest({...opts, dependencies})
+
+  // ...and a `lyra.json` manifest
+  const baseLyraManifest = await createLyraManifest(opts, {serialize: false})
+  const lyraManifest = template.generateLyraManifest
+    ? template.generateLyraManifest(baseLyraManifest, opts)
+    : baseLyraManifest
+
+  // Generate a basic readme
+  const readme = [
+    `# ${opts.name}`,
+    '',
+    opts.description,
+    '',
+    '## Running',
+    '',
+    '```',
+    'npm install',
+    'npm start',
+    '```',
+    ''
+  ].join('\n')
+
+  // Write non-template files to disc
+  await Promise.all([
+    writeFileIfNotExists('README.md', readme),
+    writeFileIfNotExists(
+      'lyra.json',
+      `${JSON.stringify(lyraManifest, null, 2)}\n`
+    ),
+    writeFileIfNotExists('package.json', packageManifest)
+  ])
+
+  // Finish up by providing init process with template-specific info
+  spinner.succeed()
+  return template
+
+  async function writeFileIfNotExists(fileName, content) {
+    const filePath = path.join(outputDir, fileName)
+    try {
+      await fse.writeFile(filePath, content, {flag: 'wx'})
+    } catch (err) {
+      if (err.code === 'EEXIST') {
+        output.print(`[WARN] File "${filePath}" already exists, skipping`)
+      } else {
+        throw err
+      }
+    }
+  }
+}
+
+function isFirstParty(pkg) {
+  return pkg.indexOf('@lyra/') === 0
+}

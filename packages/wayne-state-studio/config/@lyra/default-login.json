@@ -1,0 +1,14 @@
+{
+  "providers": {
+    "mode": "append",
+    "redirectOnSingle": false,
+    "entries": [
+      {
+        "name": "lpf-editor",
+        "title": "LPF Workshop Editor",
+        "logo": "https://librarypublishing.org/wp-content/themes/blueInfinity/images/library_publishing_consortium.png",
+        "url": "https://chaperone.o5.no/login/lpf-editor"
+      }
+    ]
+  }
+}

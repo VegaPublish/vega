@@ -1,0 +1,24 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "name": "part:@vega/communicator",
+      "path": "components/providers/Communicator.js"
+    },
+    {
+      "name": "part:@vega/communicator/wrapper",
+      "path": "components/views/CommunicatorWrapper.js"
+    },
+    {
+      "name": "part:@vega/communicator/datastores/state",
+      "path": "datastores/stateStore.js"
+    },
+    {
+      "name": "part:@vega/communicator/datastores/comments",
+      "path": "datastores/commentStore/index.js"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "name": "part:@vega/attention/notification-provider",
+      "description": "Providers of notifications to the attention system"
+    },
+    {
+      "name": "part:@vega/core/router",
+      "path": "router/index.js"
+    },
+    {
+      "name": "part:@vega/core/datastores/urlstate",
+      "description": "URL state data store",
+      "path": "datastores/urlState.js"
+    },
+    {
+      "name": "part:@vega/core/datastores/notifications",
+      "description": "Notifications datastore",
+      "path": "datastores/notifications"
+    },
+    {
+      "name": "part:@vega/core/datastores/focus",
+      "description": "Current object focus data store",
+      "path": "datastores/focusStore.js"
+    },
+    {
+      "name": "part:@vega/core/datastores/feature",
+      "description": "Stage feature config/state data store",
+      "path": "datastores/featureStore.js"
+    },
+    {
+      "name": "part:@vega/datastores/document-preview",
+      "description": "A datastore for simple document preview",
+      "path": "datastores/documentPreview.js"
+    },
+    {
+      "name": "part:@vega/datastores/venue",
+      "description": "Data store for venues",
+      "path": "datastores/venue.js"
+    },
+    {
+      "name": "part:@vega/datastores/role",
+      "description": "Data store for capabilities and roles",
+      "path": "datastores/roleStore/index.js"
+    },
+    {
+      "name": "part:@vega/datastores/issue",
+      "description": "Data store for issue",
+      "path": "datastores/issueStore.js"
+    },
+    {
+      "name": "part:@vega/datastores/user",
+      "description": "Data store for Vega users",
+      "path": "datastores/userStore.js"
+    },
+    {
+      "implements": "part:@lyra/base/article-schema-type",
+      "description": "Vega article schema type",
+      "path": "schema/article.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/article.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/author.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/blockContent.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/footnoteBlockContent.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/abstractBlockContent.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/comment.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/historyEvent.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/issue.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/pointer.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/section.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/stage.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/track.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/trackStage.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/user.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/invite.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/venue.js"
+    },
+    {
+      "implements": "part:@lyra/desk-tool/desk-tool-config",
+      "path": "desk-tool.config.js"
+    }
+  ]
+}

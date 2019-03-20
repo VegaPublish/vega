@@ -1,0 +1,41 @@
+{
+  "name": "@lyra/mutator",
+  "version": "0.2.5",
+  "description": "A set of models to make it easier to utilize the powerful real time collaborative features of Lyra",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test": "tap test/*.test.js --node-arg --require --node-arg ./.babel-init.js",
+    "typecheck": "flow check"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "mutator"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "diff-match-patch": "^1.0.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "tap": "^11.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "publishConfig": {
+    "access": "public"
+  }
+}

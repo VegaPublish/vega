@@ -1,0 +1,86 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+/*
+  The flex alignment here is to stretch the editor to
+  fit its parrent, and to make the last child selectable for editing
+*/
+
+.root {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--input-bg);
+}
+
+.editor {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.root.hasBlockExtras:not(.fullscreen) {
+  margin-right: 5rem;
+  border-right: 1px solid var(--gray);
+}
+
+/* less spacing on block objects / non-text objects */
+.editor div[data-slate-void='true'] + div[data-slate-void='true'] {
+  padding-top: var(--small-padding);
+}
+
+.editor > * {
+  box-sizing: content-box;
+  position: relative;
+  padding-top: var(--medium-padding);
+  padding-left: var(--small-padding);
+  padding-right: var(--small-padding);
+
+  @media (--screen-medium) {
+    padding-left: var(--medium-padding);
+    padding-right: var(--medium-padding);
+  }
+
+  @nest .fullscreen & {
+    padding-left: var(--large-padding);
+    padding-right: var(--large-padding);
+  }
+}
+
+.editor > *:first-child {
+  padding-top: var(--small-padding);
+
+  @media (--screen-medium) {
+    margin-top: var(--medium-padding);
+  }
+
+  @nest .fullscreen & {
+    margin-top: var(--large-padding);
+  }
+}
+
+.editor > *:last-child {
+  align-self: stretch;
+  flex-grow: 1;
+  padding-bottom: var(--small-padding);
+
+  @media (--screen-medium) {
+    padding-bottom: var(--medium-padding);
+  }
+
+  @nest .fullscreen & {
+    padding-bottom: var(--large-padding);
+  }
+}
+
+.blockDragMarker {
+  display: block;
+  background-color: var(--brand-primary);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+}

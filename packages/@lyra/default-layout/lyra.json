@@ -1,0 +1,42 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+
+  "parts": [
+    {
+      "name": "part:@lyra/default-layout/action-modal-style",
+      "description": "Styles for the action picker modal"
+    },
+
+    {
+      "implements": "part:@lyra/base/root",
+      "name": "part:@lyra/default-layout/root",
+      "path": "components/DefaultLayoutContainer"
+    },
+
+    {
+      "implements": "part:@lyra/default-layout/tool-switcher",
+      "name": "part:@lyra/default-layout/default-tool-switcher",
+      "path": "components/ToolSwitcher"
+    },
+
+    {
+      "name": "part:@lyra/default-layout/branding",
+      "description": "Branding"
+    },
+    {
+      "implements": "part:@lyra/default-layout/branding",
+      "path": "components/Branding"
+    },
+    {
+      "name": "part:@lyra/default-layout/branding-style",
+      "description": "Branding styling"
+    },
+    {
+      "implements": "part:@lyra/default-layout/branding-style",
+      "path": "components/styles/Branding.css"
+    }
+  ]
+}

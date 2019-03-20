@@ -1,0 +1,10 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  padding: 2vh;
+  margin: 1vh;
+  display: block;
+  border: 2px dotted var(--state-warning-color);
+}
+.heading {
+}

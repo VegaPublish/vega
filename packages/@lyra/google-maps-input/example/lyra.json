@@ -1,0 +1,29 @@
+{
+  "server": {
+    "hostname": "0.0.0.0"
+  },
+  "api": {
+    "dataset": "production",
+    "apiHost": "http://localhost:4000"
+  },
+  "plugins": ["@lyra/base", "@lyra/components", "@lyra/form-builder"],
+  "parts": [
+    {
+      "implements": "part:@lyra/base/root",
+      "path": "./Main"
+    },
+    {
+      "implements": "part:@lyra/base/schema",
+      "path": "./schema.js"
+    },
+    {
+      "name": "part:@lyra/google-maps-input/input/geopoint",
+      "implements": "part:@lyra/form-builder/input/geopoint",
+      "path": "../src/GeopointInput.js"
+    },
+    {
+      "implements": "part:@lyra/base/locale-messages",
+      "path": "../locale/strings.json"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.container {
+  position: relative;
+}
+
+.input {
+  composes: textInput from 'part:@lyra/base/theme/forms/text-input-style';
+  position: relative;
+
+  @nest .isClearable & {
+    padding-right: 2em;
+  }
+
+  @nest &:disabled {
+    background-color: transparent;
+  }
+}
+
+.clearButton {
+  composes: textInput from 'part:@lyra/base/theme/forms/clear-button-style';
+  position: absolute;
+  top: 0;
+  right: 0.5em;
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  @nest & svg {
+    color: inherit;
+  }
+}

@@ -1,0 +1,15 @@
+.selectContainer {
+  composes: root from 'part:@lyra/components/selects/default-style';
+}
+
+.functions {
+  composes: functions from 'part:@lyra/components/selects/default-style';
+}
+
+.select {
+  composes: select from 'part:@lyra/components/selects/default-style';
+}
+
+.icon {
+  composes: arrow from 'part:@lyra/components/selects/default-style';
+}

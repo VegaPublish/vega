@@ -1,0 +1,1 @@
+require('./transformPkgs')(pkg => pkg)

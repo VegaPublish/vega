@@ -1,0 +1,16 @@
+@import './shared.css';
+
+.root {
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+li.schema {
+  list-style-type: none;
+}
+
+li.type {
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px;
+}

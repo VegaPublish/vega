@@ -1,0 +1,24 @@
+.root {
+  display: block;
+}
+
+.vertical {
+  composes: root;
+}
+
+.horizontal {
+  composes: root;
+
+  @nest & .radioContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.container {
+  display: block;
+}
+
+.item {
+  margin-right: 1rem;
+}

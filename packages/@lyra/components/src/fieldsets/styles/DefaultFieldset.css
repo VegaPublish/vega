@@ -1,0 +1,244 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  composes: root from 'part:@lyra/components/formfields/default-style';
+
+  & & {
+    /* nested inside itself */
+    margin: 0;
+  }
+}
+
+.root + .root {
+  margin-top: var(--medium-padding);
+}
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  /* user agent sets min-width this to --webkit-min-content */
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--small-padding);
+}
+
+.headerMain {
+  flex-grow: 1;
+}
+
+.headerStatus {
+  padding: var(--small-padding);
+}
+
+.validationIconError {
+  composes: validationIconError from 'part:@lyra/base/theme/forms/validation-style';
+}
+
+@media (--screen-medium) {
+  .columns4 .fieldWrapper {
+    display: grid;
+    grid-gap: var(--medium-padding);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .columns3 .fieldWrapper {
+    display: grid;
+    grid-gap: var(--medium-padding);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .columns2 .fieldWrapper {
+    display: grid;
+    grid-gap: var(--medium-padding);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.columns1 {
+  composes: root;
+}
+
+.columns2 {
+  composes: root;
+}
+
+.content {
+  position: relative;
+  display: none;
+  background-color: transparent;
+
+  @nest &.isOpen {
+    display: block;
+  }
+
+  @nest .transparent & {
+    background-color: transparent;
+  }
+
+  & & {
+    /* nested inside itself */
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  @nest .hasErrors:focus-within & {
+    box-shadow: var(--component-box-shadow--error) !important;
+  }
+}
+
+.canFocus > .fieldset > .inner > .content {
+  padding: var(--small-padding);
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--component-box-shadow);
+
+  @media (--screen-medium) {
+    padding: var(--medium-padding);
+  }
+}
+
+.level1 > .fieldset > .inner > .content {
+  background-color: var(--component-bg);
+  box-shadow: var(--component-box-shadow);
+  padding: var(--small-padding);
+  border-radius: var(--border-radius-base);
+
+  @media (--screen-medium) {
+    padding: var(--medium-padding);
+  }
+}
+
+.level2 > .fieldset > .inner > .content {
+  background-color: var(--component-bg);
+  box-shadow: var(--component-box-shadow);
+  padding: var(--small-padding);
+  border-radius: var(--border-radius-base);
+
+  @media (--screen-medium) {
+    padding: var(--medium-padding);
+  }
+}
+
+.root {
+  outline: none;
+}
+
+.root:not(.level1):focus > .fieldset > .inner > .content {
+  box-shadow: var(--component-box-shadow--focus);
+}
+
+.root:not(.level2):focus > .fieldset > .inner > .content {
+  box-shadow: var(--component-box-shadow--focus);
+}
+
+.level1:focus > .fieldset > .inner > .content {
+  box-shadow: var(--component-box-shadow--focus);
+}
+
+.level2:focus > .fieldset > .inner > .content {
+  box-shadow: var(--component-box-shadow--focus);
+}
+
+.inner {
+  display: block;
+}
+
+.legend + .description {
+  margin-top: calc(var(--small-padding) / 3);
+}
+
+.legend + .content {
+  margin-top: var(--small-padding);
+}
+
+.description + .content {
+  margin-top: var(--small-padding);
+}
+
+.legend {
+  composes: headingLevel_1 from 'part:@lyra/base/theme/typography/forms-style';
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  cursor: default;
+
+  @nest .level2 & {
+    font-size: var(--font-size-base);
+    text-transform: none;
+  }
+
+  @nest .level3 & {
+    font-size: var(--font-size-base);
+    text-transform: none;
+  }
+
+  @nest .level4 & {
+    font-size: var(--font-size-base);
+    text-transform: none;
+  }
+
+  @nest .level5 & {
+    font-size: var(--font-size-base);
+    text-transform: none;
+  }
+}
+
+.level1,
+.level2,
+.level3,
+.level4 {
+  display: block;
+  box-shadow: none;
+}
+
+.arrow {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin-right: 0.25em;
+  vertical-align: middle;
+  transition: transform 0.1s linear;
+  transform: rotate(-90deg);
+  margin-top: -0.1em;
+
+  @nest &.isOpen {
+    transform: rotate(0);
+  }
+
+  @nest & svg {
+    position: absolute;
+    transform: scale(1.2);
+  }
+}
+
+.description {
+  composes: description from 'part:@lyra/base/theme/typography/text-blocks-style';
+  margin: 0;
+  padding: 0;
+  display: none;
+
+  @nest &.isOpen {
+    display: block;
+  }
+}
+
+.debugNestingLevel {
+  display: none;
+}

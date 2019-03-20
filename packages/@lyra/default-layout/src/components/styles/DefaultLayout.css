@@ -1,0 +1,245 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+@keyframes loadingScreen {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+:global(body) {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+
+  @media (--screen-medium) {
+    max-height: 100%;
+    overflow: hidden;
+  }
+}
+
+:global([data-env='development'] .undefined)::before {
+  position: absolute;
+  background-color: color(red a(50%));
+  color: white;
+  content: 'FIXME: "undefined" as className!';
+  z-index: 1000;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 2px 4px;
+}
+
+:root {
+  --tool-switcher-width: 6rem;
+  --secondary-menu-background-color: var(--main-navigation-background-color);
+}
+
+.defaultLayout {
+  display: flex;
+  padding: 0;
+  max-width: 100%;
+  width: 100vw;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: calc(100vh - var(--header-height));
+
+  @media (--screen-medium) {
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+}
+
+.loadingScreen {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+  z-index: 5000;
+  animation-name: loadingScreen;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+.loadingScreenLoaded {
+  display: none;
+}
+
+.navigation {
+  border-bottom: 1px solid var(--component-border-color);
+}
+
+.branding {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  @media (--screen-medium) {
+    position: relative;
+  }
+}
+
+.toolContainer {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  flex-grow: 1;
+  display: block;
+  margin-top: 0;
+
+  @media (--screen-medium) {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+}
+
+.mainArea {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  padding-top: var(--header-height);
+
+  @media (--screen-medium) {
+    padding-top: 0;
+  }
+}
+
+.secondaryNavigation {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: stretch;
+  justify-content: flex-end;
+  flex-direction: row;
+  position: fixed;
+  width: 100vw;
+  font-size: var(--font-size-xsmall);
+  background-color: var(--secondary-menu-background-color);
+  height: var(--header-height);
+  z-index: var(--zindex-navbar);
+
+  @media (--screen-medium) {
+    z-index: initial;
+    position: relative;
+    display: block;
+    width: var(--tool-switcher-width);
+    height: 100vh;
+  }
+}
+
+.createButton {
+  display: none;
+  text-align: center;
+  color: var(--brand-primary);
+  user-select: none;
+  cursor: default;
+  position: relative;
+  padding: 0 1rem;
+
+  @nest &:hover {
+    background-color: color(var(--white) a(10%));
+  }
+
+  @nest &:active {
+    background-color: color(var(--brand-primary) a(20%));
+  }
+
+  @media (--screen-medium) {
+    display: block;
+    padding-bottom: var(--medium-padding);
+  }
+}
+
+.createButtonIcon {
+  display: inline-block;
+  font-size: 2em;
+
+  @media (--screen-medium) {
+    font-size: 3em;
+    display: block;
+  }
+}
+
+.createButtonText {
+  display: inline-block;
+  font-size: 1em;
+
+  @media (--screen-medium) {
+    display: block;
+  }
+}
+
+.lyraStudioLogoContainer {
+  display: none;
+  position: fixed;
+  width: 5em;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  z-index: var(--zindex-navbar);
+  opacity: 0.5;
+  color: #fff;
+
+  @nest &:hover {
+    opacity: 1;
+  }
+
+  @nest & svg {
+    height: 0.6rem;
+  }
+
+  @media (--screen-medium) {
+    display: inline-block;
+  }
+}
+
+.mobileCreateButton {
+  color: var(--brand-primary);
+
+  @media (--screen-medium) {
+    display: none !important;
+  }
+}
+
+.mobileMenuButton {
+  color: var(--white);
+
+  @media (--screen-medium) {
+    display: none !important;
+  }
+}
+
+.mobileMenuIsOpen .toolSwitcher {
+  position: absolute;
+  height: calc(100vh - var(--header-height));
+  display: block;
+  z-index: 5000;
+  backdrop-filter: blur(20px);
+  background-color: color(var(--secondary-menu-background-color) a(90%));
+  transition: height 0.1s linear;
+  width: 100vw;
+}
+
+.toolSwitcher {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  transition: height 0.1s linear;
+  top: var(--header-height);
+  left: 0;
+
+  @media (--screen-medium) {
+    position: relative;
+    display: block;
+    width: auto;
+    top: initial;
+    height: initial;
+    left: initial;
+  }
+}

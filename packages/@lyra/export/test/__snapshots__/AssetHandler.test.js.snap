@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`asset handler can remove asset documents: Nothing removed in assetless doc 1`] = `
+Object {
+  "_id": "plain",
+  "_type": "bike",
+  "name": "Broom",
+}
+`;
+
+exports[`asset handler can remove asset documents: doc1 with no image asset 1`] = `
+Object {
+  "_id": "doc1",
+  "_type": "bike",
+  "name": "Scooter",
+}
+`;
+
+exports[`asset handler can remove asset documents: doc2 with no image asset 1`] = `
+Object {
+  "_id": "doc2",
+  "_type": "bike",
+  "name": "Dupe",
+}
+`;
+
+exports[`asset handler can remove asset documents: doc3 with no image asset 1`] = `
+Object {
+  "_id": "doc3",
+  "_type": "bike",
+  "name": "Tandem",
+}
+`;
+
+exports[`asset handler can remove asset documents: old4 with no image asset 1`] = `
+Object {
+  "_id": "old4",
+  "_type": "bike",
+  "name": "Cool",
+}
+`;

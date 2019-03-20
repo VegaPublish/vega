@@ -1,0 +1,78 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.listItem {
+  margin: 0;
+  padding: 0;
+  display: block;
+  padding: var(--medium-padding) 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.articleList {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.articleListItem {
+  display: block;
+  padding: var(--medium-padding);
+  cursor: default;
+  transition: opacity 0.1s linear, border-color 0.1s linear;
+  border: 1px solid transparent;
+  height: 2rem;
+
+  @nest &:hover {
+    background-color: color(var(--brand-primary) a(10%));
+  }
+
+  @nest &:active {
+    background-color: var(--brand-primary);
+    color: #fff;
+  }
+}
+
+.articleListItemOpen {
+  composes: articleListItem;
+  background-color: #fff;
+  border-color: #ccc;
+  border-left: 3px solid var(--brand-primary);
+  margin-bottom: var(--medium-padding);
+  height: auto;
+
+  @nest &:hover {
+    background-color: #fff;
+  }
+}
+.articleListItemClosed {
+  composes: articleListItem;
+}
+
+.articleListItemDimmed {
+  composes: articleListItem;
+
+  @nest &:not(:first-child) {
+    border-top-color: color(#ccc a(0%));
+  }
+
+  opacity: 0.5;
+
+  @nest &:hover {
+    border-color: #ccc;
+    opacity: 1;
+  }
+}
+
+.article {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,127 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+
+  "parts": [
+    {
+      "name": "part:@lyra/form-builder/input-resolver",
+      "description": "Function that resolves the input component to use for a given field"
+    },
+
+    {
+      "name": "part:@lyra/form-builder",
+      "description": "Lyra form builder module"
+    },
+
+    {
+      "name": "part:@lyra/form-builder/container",
+      "description": "Container component that abstracts loading of documents, schemas etc"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/array",
+      "description": "Input component for the core array type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/array/functions",
+      "description": "React component defining array functions such as add item"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/boolean",
+      "description": "Input component for the core boolean type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/date",
+      "description": "Input component for the core date type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/email",
+      "description": "Input component for the core email type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/geopoint",
+      "description": "Input component for the core geopoint type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/number",
+      "description": "Input component for the core number type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/object",
+      "description": "Input component for the core object type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/reference",
+      "description": "Input component for the core reference type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/string",
+      "description": "Input component for the core string type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/text",
+      "description": "Input component for the core text type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/url",
+      "description": "Input component for the core url type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/slug",
+      "description": "Input component for the slug type"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/block-editor/on-paste",
+      "description": "Function for handling on-paste event in the block editor"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/block-editor/on-copy",
+      "description": "Function for handling on-copy event in the block editor"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/block-editor/block-markers",
+      "description": "Component that shows and handles all markers (validation and custom) within a block"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/block-editor/block-extras",
+      "description": "Component that renders block actions and markers for a block (all content in the right marigin)"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/block-editor/block-markers-custom",
+      "description": "Component that renders custom markers for a block (everything but validation markers)"
+    },
+    {
+      "implements": "part:@lyra/base/locale-messages",
+      "path": "lyra/locale/strings.json"
+    },
+    {
+      "implements": "part:@lyra/form-builder",
+      "path": "lyra/index.js"
+    },
+    {
+      "name": "part:@lyra/form-builder/patch-event",
+      "path": "PatchEvent.js"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/array/functions-default",
+      "implements": "part:@lyra/form-builder/input/array/functions",
+      "path": "inputs/ArrayInput/ArrayFunctions.js"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/block-editor/block-markers-default",
+      "implements": "part:@lyra/form-builder/input/block-editor/block-markers",
+      "path": "inputs/BlockEditor/nodes/Markers.js"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/block-editor/block-extras-default",
+      "implements": "part:@lyra/form-builder/input/block-editor/block-extras",
+      "path": "inputs/BlockEditor/nodes/BlockExtras.js"
+    },
+    {
+      "name": "part:@lyra/form-builder/input/block-editor/block-markers-custom-default",
+      "implements": "part:@lyra/form-builder/input/block-editor/block-markers-custom",
+      "path": "inputs/BlockEditor/nodes/CustomMarkers.js"
+    }
+  ]
+}

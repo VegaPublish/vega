@@ -1,0 +1,145 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  display: block;
+  outline: none;
+  position: relative;
+
+  @nest &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.inner {
+  composes: root from 'part:@lyra/base/theme/forms/text-input-style';
+  cursor: default;
+
+  @nest &:hover {
+    box-shadow: var(--input-box-shadow--hover);
+    border-color: var(--input-border-color-hover);
+  }
+}
+
+.transparent .inner {
+  background-color: transparent;
+}
+
+.transparent:hover .inner {
+  box-shadow: var(--input-box-shadow--hover);
+  border-color: var(--input-border-color-hover);
+  background-color: var(--input-bg);
+}
+
+.root:focus .inner,
+.root:focus:hover .inner {
+  box-shadow: var(--input-box-shadow--focus);
+  border-color: var(--input-border-color-focus);
+  background-color: var(--input-bg);
+}
+
+.selectContainer {
+  composes: selectContainer from 'part:@lyra/components/selects/default-style';
+}
+
+.arrow {
+  composes: functions from './SearchableSelect.css';
+}
+
+.portal {
+  position: fixed;
+  z-index: var(--zindex-portal);
+  top: 0;
+  left: 0;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  composes: shadow-4dp from 'part:@lyra/base/theme/shadows-style';
+  box-sizing: border-box;
+  transform: translateY(-1px);
+  background-color: var(--component-bg);
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+}
+
+.text {
+  color: var(--text-color);
+}
+
+.listContainerHidden {
+  display: none;
+}
+
+.noResultText {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.spinner {
+  position: absolute;
+  top: 0.5em;
+  right: 0.75em;
+}
+
+.item {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid var(--gray-light);
+  white-space: nowrap;
+  overflow: hidden;
+  min-height: 2em;
+  cursor: default;
+  padding-right: 1em;
+  color: inherit;
+
+  &:last-child {
+    border: 0;
+  }
+
+  &:hover {
+    background-color: var(--selectable-item-color-hover);
+  }
+
+  &:active {
+    background-color: var(--gray-light--transparent);
+  }
+}
+
+.itemContent {
+  margin-left: 2em;
+  padding: 0.5em 0;
+}
+
+.itemActive {
+  composes: item;
+  background-color: var(--selected-item-color);
+  color: var(--selected-item-color--inverted);
+
+  @nest &:hover {
+    background-color: var(--selected-item-color);
+    color: var(--selected-item-color--inverted);
+  }
+}
+
+.itemSelected {
+  composes: item;
+  background-color: var(--selectable-item-color-hover);
+  color: var(--selected-item-color--inverted);
+}
+
+.itemIcon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0.5em;
+  transform: translateY(-50%);
+  font-size: 1em;
+  width: 2em;
+  overflow: hidden;
+}

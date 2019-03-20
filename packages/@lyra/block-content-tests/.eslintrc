@@ -1,0 +1,10 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "id-length": ["warn", {"exceptions": ["i", "w", "h"], "min": 2}]
+  }
+}

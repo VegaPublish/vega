@@ -1,0 +1,70 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  background-color: var(--component-bg);
+  color: var(--text-color);
+  composes: shadow-8dp from 'part:@lyra/base/theme/shadows-style';
+  font-size: var(--font-size-small);
+  user-select: none;
+  text-align: left;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.list {
+  composes: resetList from 'part:@lyra/base/theme/layout/helpers';
+}
+
+.item {
+  composes: resetListItem from 'part:@lyra/base/theme/layout/helpers';
+  composes: item from 'part:@lyra/base/theme/layout/selectable-style';
+  white-space: nowrap;
+}
+
+.isDisabled {
+  @nest &:hover {
+    background-color: inherit;
+  }
+}
+
+.focusedItem {
+  composes: item;
+}
+
+.iconContainer {
+  margin-right: 0.5em;
+}
+
+.link {
+  display: block;
+  position: relative;
+  line-height: 3em;
+  padding: 0 1em;
+  cursor: default;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.dangerLink {
+  composes: link;
+  color: var(--state-danger-color);
+}
+
+.divider {
+  border-top: 1px solid var(--gray-light);
+}
+
+.isDisabled {
+  opacity: 0.4;
+}
+
+.isOpen {
+  composes: root;
+  display: block;
+}
+
+.closed {
+  composes: root;
+  display: none;
+}

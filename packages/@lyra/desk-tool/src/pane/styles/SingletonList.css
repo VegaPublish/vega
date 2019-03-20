@@ -1,0 +1,31 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  display: block;
+}
+
+.list {
+  composes: resetList from 'part:@lyra/base/theme/layout/helpers';
+}
+
+.itemWrapper {
+  composes: resetListItem from 'part:@lyra/base/theme/layout/helpers';
+}
+
+.item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.selected {
+  composes: item;
+  background-color: var(--selected-item-color);
+}
+
+.link {
+  composes: link from './DocumentsPane.css';
+  margin: 0;
+  line-height: 1rem;
+  padding: var(--medium-padding);
+}

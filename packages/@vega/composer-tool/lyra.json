@@ -1,0 +1,16 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@lyra/base/tool",
+      "path": "index.js"
+    },
+    {
+      "implements": "part:@lyra/components/with-pointers-as-markers",
+      "path": "components/WithPointersAsMarkers.js"
+    }
+  ]
+}

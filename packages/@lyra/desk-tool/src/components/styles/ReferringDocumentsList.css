@@ -1,0 +1,10 @@
+.root {
+  composes: root from 'part:@lyra/components/lists/default-style';
+}
+.item {
+  composes: lineBetween from 'part:@lyra/components/lists/default-item-style';
+  padding: 1px 0;
+}
+.link {
+  color: inherit;
+}

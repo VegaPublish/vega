@@ -1,0 +1,38 @@
+@import 'part:@lyra/base/theme/variables-style';
+@import 'part:@lyra/base/theme/body-style';
+
+.root {
+}
+
+.reviewProcessTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reviewProcessTable caption {
+  font-size: 2rem;
+  margin-top: 1.5em;
+}
+
+.reviewProcessTable td,
+.reviewProcessTable th {
+  padding: var(--medium-padding) var(--small-padding);
+}
+
+.reviewProcessTable td {
+  border-bottom: 1px solid var(--gray);
+}
+
+.reviewProcessTable tbody tr:not(:first-child):hover td,
+.reviewProcessTable tbody tr:not(:first-child):hover th {
+  background-color: color(var(--brand-primary) a(7%));
+}
+
+.reviewProcessTable tr th {
+  text-align: left;
+  border-bottom: 2px solid var(--brand-primary);
+}
+
+th.headerCell {
+  border: none;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@vega/feature-notifier",
+  "version": "0.2.8",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf lib"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "feature-notifier"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@lyra/base": "0.2.8",
+    "@lyra/image-url": "0.2.6",
+    "lodash": "^4.17.10",
+    "rxjs": "^6.2.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+
+  "plugins": ["@lyra/form-builder"],
+
+  "parts": [
+    {
+      "implements": "part:@lyra/base/tool",
+      "path": "index.js"
+    },
+    {
+      "name": "part:@lyra/desk-tool/after-editor-component",
+      "description": "[DEPRECATED] Components to render directly after the editor form. Will be removed in future release."
+    },
+    {
+      "name": "part:@lyra/desk-tool/desk-tool-config",
+      "description": "A part for customizing desk tool"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@vega/attention",
+  "version": "0.2.5",
+  "description": "Common utilities",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf lib"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "attention"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "dependencies": {
+    "recompose": "^0.26.0",
+    "rxjs": "^6.2.0",
+    "shallow-equals": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "16.3.2"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

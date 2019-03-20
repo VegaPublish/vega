@@ -1,0 +1,74 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  display: flex;
+  flex-wrap: nowrap;
+  clear: both;
+  padding: 0.8em;
+  position: relative;
+
+  @nest &:hover {
+    background-color: color(var(--gray) a(20%));
+  }
+}
+
+.isUnread {
+  background-color: color(var(--state-warning-color) a(20%));
+}
+
+.isNew {
+  background-color: color(var(--state-danger-color) a(30%));
+}
+
+.media {
+  margin: 0.25em;
+  margin-right: 0.75em;
+}
+
+.date {
+  color: #666;
+  font-size: 0.8em;
+}
+
+.content {
+  font-size: 0.8em;
+}
+
+.image {
+  height: 2em;
+  width: 2em;
+}
+
+.noImage {
+  composes: image;
+  background-color: #ccc;
+}
+
+.title {
+  height: 1.4em;
+  line-height: 1.4em;
+  width: calc(100% - 6em);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  color: var(--brand-primary);
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.description {
+  font-size: 0.9em;
+  height: 1.4em;
+  line-height: 1.4em;
+  width: calc(100% - 6em);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+.actions {
+  color: green;
+}

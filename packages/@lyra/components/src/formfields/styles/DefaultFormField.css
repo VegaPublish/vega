@@ -1,0 +1,135 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.root + .root {
+  margin-top: var(--medium-padding);
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  composes: root;
+  display: inline;
+}
+
+.label {
+  display: block;
+}
+
+.label + .description {
+  margin-top: calc(var(--small-padding) / 3);
+}
+
+.label + .content {
+  margin-top: var(--small-padding);
+}
+
+.description + .content {
+  margin-top: var(--small-padding);
+}
+
+.description {
+  composes: description from 'part:@lyra/base/theme/typography/text-blocks-style';
+
+  @nest .inline & {
+    font-size: var(--font-size-tiny);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--small-padding);
+}
+
+.headerMain {
+  flex-grow: 1;
+}
+
+.headerStatus {
+  display: flex;
+  padding: var(--small-padding);
+  align-content: center;
+}
+
+.validationStatus {
+  cursor: default;
+}
+
+.validationIconError {
+  composes: validationIconError from 'part:@lyra/base/theme/forms/validation-style';
+
+  @nest .root:focus-within & {
+    text-shadow: 0 0 5px var(--state-danger-color);
+    color: var(--state-danger-color);
+  }
+}
+
+.validationList {
+  composes: validationList from 'part:@lyra/base/theme/forms/validation-style';
+  margin-bottom: var(--small-padding);
+}
+
+.validationListClosed {
+  composes: validationListClosed from 'part:@lyra/base/theme/forms/validation-style';
+}
+
+.labelAndDescriptionWrapper {
+  display: block;
+
+  @nest .inline & {
+    flex-basis: 33%;
+    flex-grow: 1;
+  }
+}
+
+.content {
+  display: block;
+
+  @nest .inline & {
+    flex-basis: 77%;
+    flex-grow: 10;
+    display: inline-block;
+  }
+}
+
+.wrapped {
+  composes: root;
+  padding: 1rem;
+  background-color: var(--component-bg);
+  border: 1px solid var(--gray-light);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.inner {
+  display: block;
+
+  @nest .inline & {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.level_1 {
+  composes: root;
+}
+
+.level_2 {
+  composes: root;
+}
+
+.level_3 {
+  composes: root;
+}
+
+.level_4 {
+  composes: root;
+}

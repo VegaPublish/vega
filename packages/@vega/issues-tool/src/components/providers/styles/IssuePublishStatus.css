@@ -1,0 +1,13 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  padding: 0px var(--medium-padding) var(--medium-padding) var(--medium-padding);
+  box-sizing: border-box;
+  max-width: 100vw;
+  border: 1px solid var(--brand-primary);
+}
+
+li {
+  list-style-type: disc;
+  margin-left: 1em;
+}

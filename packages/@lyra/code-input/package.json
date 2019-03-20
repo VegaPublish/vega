@@ -1,0 +1,39 @@
+{
+  "name": "@lyra/code-input",
+  "version": "0.2.5",
+  "description": "Ace editor for editing code",
+  "main": "lib/index.js",
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "prepublishOnly": "lyra-check"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "code-input"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "react-ace": "^5.0.1"
+  },
+  "devDependencies": {
+    "@lyra/check": "^0.2.5",
+    "rimraf": "^2.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

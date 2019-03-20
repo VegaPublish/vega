@@ -1,0 +1,212 @@
+@import 'part:@lyra/base/theme/variables-style';
+@import 'part:@lyra/base/theme/animation-style';
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+:root {
+  --switch-color: var(--brand-primary);
+  --shadow-ambient-shadow-opacity: 0.5;
+  --shadow-key-penumbra-opacity: 0.5;
+  --shadow-key-umbra-opacity: 0.5;
+
+  /* Label */
+  --switch-label-height: 1.25rem;
+  --switch-label-font-size: 1rem;
+
+  /* Thumb */
+  --switch-thumb-top: 0;
+  --switch-thumb-size: 1.25rem;
+  --switch-thumb-color: var(--switch-color);
+  --switch-off-thumb-color: var(--white);
+  --switch-on-thumb-color: var(--switch-color);
+  --switch-disabled-thumb-color: var(--white);
+
+  /* Track */
+  --switch-track-top: 0.35rem;
+  --switch-track-height: 0.6rem;
+  --switch-track-length: 2rem;
+  --switch-disabled-track-color: var(--state-danger-color);
+  --switch-track-color: var(--gray-light);
+  --switch-off-track-color: var(--gray-light);
+  --switch-on-track-color: var(--focus-color);
+  --switch-faded-color: rgba(0, 0, 0, 0.1);
+
+  /* Helper */
+  --switch-helper-size: 3rem;
+  --switch-helper-color: color(var(--brand-primary) alpha(20%));
+}
+
+.root {
+  composes: root from 'part:@lyra/components/formfields/default-style';
+  display: inline-block !important;
+  width: auto !important;
+  user-select: none;
+  position: relative;
+}
+
+.indeterminate {
+  composes: root;
+}
+
+.switch {
+  background: var(--switch-off-track-color);
+  position: absolute;
+  left: 0;
+  top: var(--switch-track-top);
+  height: var(--switch-track-height);
+  width: var(--switch-track-length);
+  border-radius: var(--switch-track-height);
+  cursor: default;
+
+  @nest .checked & {
+    background: var(--switch-track-color);
+  }
+
+  @nest .isDisabled & {
+    background: var(--switch-disabled-track-color);
+    cursor: auto;
+  }
+}
+
+.enabled {
+  composes: root;
+}
+
+.isDisabled {
+  composes: root;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.isChecked {
+  display: block;
+}
+
+.unchecked {
+  display: block;
+}
+
+.hasFocus {
+  display: block;
+}
+
+.thumb {
+  background: var(--switch-off-thumb-color);
+  position: absolute;
+  left: 0;
+  top: var(--switch-thumb-top);
+  height: var(--switch-thumb-size);
+  width: var(--switch-thumb-size);
+  border-radius: 50%;
+  cursor: default;
+  composes: shadow-2dp from 'part:@lyra/base/theme/shadows-style';
+  composes: animation-default from 'part:@lyra/base/theme/animation-style';
+  transition-property: left;
+
+  @nest .disabled & {
+    background: var(--switch-disabled-thumb-color);
+    cursor: auto;
+  }
+}
+
+.thumbChecked {
+  composes: thumb;
+  composes: shadow-3dp from 'part:@lyra/base/theme/shadows-style';
+  background: var(--switch-thumb-color);
+  left: calc(var(--switch-track-length) - var(--switch-thumb-size));
+}
+
+.thumbIndeterminate {
+  composes: thumb;
+  left: calc(0.5 * (var(--switch-track-length) - var(--switch-thumb-size)));
+}
+
+.focusHelper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: var(--switch-helper-size);
+  height: var(--switch-helper-size);
+  border-radius: 50%;
+  background-color: transparent;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: background-color 0.1s linear, transform 0.15s linear;
+
+  @nest .hasFocus & {
+    /* box-shadow: 0 0 0px (($switch-ripple-size - $switch-helper-size) / 2) rgba(0, 0, 0, 0.1); */
+    background-color: var(--switch-helper-color);
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @nest .root:active & {
+    background-color: var(--switch-helper-color);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.input {
+  line-height: var(--switch-label-height);
+
+  /* Hide input element, while still making it respond to focus. */
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  appearance: none;
+  border: none;
+}
+
+.label {
+  display: inline-block;
+  position: relative;
+  cursor: default;
+  font-size: var(--switch-label-font-size);
+  line-height: var(--switch-label-height);
+  margin: 0;
+  left: calc(var(--switch-track-length) + 0.5rem);
+
+  @nest .disabled & {
+    color: var(--switch-disabled-thumb-color);
+    cursor: auto;
+  }
+}
+
+.description {
+  composes: description from 'part:@lyra/base/theme/typography/text-blocks-style';
+  position: relative;
+  display: block;
+  left: calc(var(--switch-track-length) + 0.5rem);
+  width: calc(100% - var(--switch-track-length) - 0.5rem);
+}
+
+.track {
+  background: var(--switch-off-track-color);
+  position: absolute;
+  left: 0;
+  top: var(--switch-track-top);
+  height: var(--switch-track-height);
+  width: var(--switch-track-length);
+  border-radius: var(--switch-track-height);
+  cursor: default;
+
+  @nest .checked & {
+    background: var(--switch-on-track-color);
+  }
+
+  @nest .disabled & {
+    background: var(--switch-disabled-track-color);
+    cursor: default;
+  }
+}

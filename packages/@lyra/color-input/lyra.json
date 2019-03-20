@@ -1,0 +1,24 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "name": "part:@lyra/form-builder/input/color",
+      "description": "Color input"
+    },
+    {
+      "implements": "part:@lyra/form-builder/input/color",
+      "path": "ColorInput.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "path": "schema.js"
+    },
+    {
+      "name": "part:@lyra/color-input/schema",
+      "path": "schema.js"
+    }
+  ]
+}

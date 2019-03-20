@@ -1,0 +1,77 @@
+[
+  {
+    "_type": "block",
+    "children": [{"_type": "span", "marks": [], "text": "Header"}],
+    "markDefs": [],
+    "style": "normal"
+  },
+  {
+    "_type": "block",
+    "children": [{"_type": "span", "marks": [], "text": "I'm a quote."}],
+    "markDefs": [],
+    "style": "blockquote"
+  },
+  {
+    "_type": "block",
+    "children": [
+      {
+        "_type": "span",
+        "marks": [],
+        "text": "And I'm a quote within a quote."
+      }
+    ],
+    "markDefs": [],
+    "style": "blockquote"
+  },
+  {
+    "_type": "block",
+    "children": [
+      {
+        "_type": "span",
+        "marks": [],
+        "text": "And I'm a quote within a quote within a quote."
+      }
+    ],
+    "markDefs": [],
+    "style": "blockquote"
+  },
+  {
+    "_type": "block",
+    "children": [
+      {
+        "_type": "span",
+        "marks": [],
+        "text": "And I'm a quote within a quote within a quote within a quote."
+      },
+      {
+        "_type": "span",
+        "marks": [],
+        "text": "\n\n"
+      },
+      {
+        "_type": "span",
+        "marks": [],
+        "text": "I am a stupid paragraph within with a stupid "
+      },
+      {
+        "_type": "span",
+        "marks": ["randomKey0"],
+        "text": "link"
+      }
+    ],
+    "markDefs": [
+      {
+        "_key": "randomKey0",
+        "_type": "link",
+        "href": "foo"
+      }
+    ],
+    "style": "blockquote"
+  },
+  {
+    "_type": "block",
+    "children": [{"_type": "span", "marks": [], "text": "Footer"}],
+    "markDefs": [],
+    "style": "normal"
+  }
+]

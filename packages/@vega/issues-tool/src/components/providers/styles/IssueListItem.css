@@ -1,0 +1,258 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  position: relative;
+  margin: 0;
+  display: block;
+  margin-bottom: var(--medium-padding);
+  padding: var(--medium-padding);
+  border-left: 3px solid color(var(--brand-primary) a(0%));
+  transition: box-shadow 0.2s ease-out;
+}
+
+.isOpen {
+  composes: root;
+}
+
+.isClosed {
+  composes: root;
+  background-color: #fff;
+  box-shadow: 0 2px 3px #ddd;
+
+  @nest &:active {
+    background-color: var(--brand-primary);
+    box-shadow: 0 1px 1px #999;
+  }
+}
+
+.header {
+  display: flex;
+  cursor: default;
+  width: 100%;
+  vertical-align: text-top;
+}
+
+.headerData {
+  display: inline-flex;
+  cursor: default;
+  align-items: center;
+  user-select: none;
+  width: 66%;
+  padding: 5px;
+
+  @nest &:hover {
+    background-color: #fafafa;
+  }
+}
+
+.headerFunctions {
+  display: inline-flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.openIssueInEditorLink {
+  /* position: absolute;
+  z-index: 1;
+  top: var(--medium-padding);
+  right: var(--medium-padding); */
+  color: #ccc;
+  cursor: default;
+
+  @nest &:hover {
+    color: #000;
+  }
+}
+
+.publishIssueButton {
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.content {
+  /* clear: both; */
+}
+
+.collapsable {
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+  box-sizing: border-box;
+}
+
+.collapsableContent {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.imageContainer {
+  display: none;
+  margin-right: var(--small-padding);
+
+  @media (--screen-medium) {
+    display: block;
+  }
+}
+
+.image {
+  height: 3.5rem;
+  width: auto;
+}
+
+.imagePlaceholder {
+  composes: image;
+  background-color: var(--gray-light);
+  width: calc(3.5em * (15 / 10));
+}
+
+.titleAndSubtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 1rem;
+  min-width: 0;
+}
+
+.title {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  @media (--screen-medium) {
+    font-size: var(--font-size-large);
+  }
+}
+
+.subTitle {
+  min-width: 0;
+  opacity: 0.5;
+  margin-right: 1rem;
+  font-size: var(--font-size-small--relative);
+
+  @media (--screen-medium) {
+    font-size: var(--font-size-base--relative);
+  }
+}
+
+.type {
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sectionsList {
+  margin: 0;
+  display: block;
+  padding: 0;
+  position: relative;
+}
+
+.section {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.sectionTitle {
+  margin: 0;
+  padding: 0;
+  margin-top: var(--medium-padding);
+  margin-left: var(--medium-padding);
+  margin-bottom: var(--small-padding);
+  color: var(--black);
+}
+
+.sectionTitleDimmed {
+  composes: sectionTitle;
+  opacity: 0.5;
+}
+
+.articleList {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.articleListDimmed {
+  composes: articleList;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.articleListItem {
+  display: block;
+  padding: var(--small-padding);
+  cursor: default;
+  transition: opacity 0.1s linear, border-color 0.1s linear;
+  border: 1px solid transparent;
+  height: 2rem;
+
+  @nest &:not(:first-child) {
+    border-top-color: #ccc;
+  }
+
+  @nest &:hover {
+    background-color: #f3f3f3;
+  }
+}
+
+.articleListItemOpen {
+  composes: articleListItem;
+  background-color: #fff;
+  border-color: #ccc;
+  border-left: 3px solid var(--brand-primary);
+  margin-bottom: var(--small-padding);
+  height: auto;
+
+  @nest &:hover {
+    background-color: #fff;
+  }
+}
+.articleListItemClosed {
+  composes: articleListItem;
+}
+
+.articleListItemDimmed {
+  composes: articleListItem;
+  opacity: 0.5;
+
+  @nest &:not(:first-child) {
+    border-top-color: color(#ccc a(0%));
+  }
+
+  @nest &:hover {
+    border-color: #ccc;
+    opacity: 1;
+  }
+}
+
+.article {
+  margin: 0;
+  padding: 0;
+}
+
+.dots {
+  max-height: 3rem;
+  overflow: hidden;
+  text-align: right;
+  margin-right: 1rem;
+
+  @nest & > :global(span) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.noSections {
+  padding: var(--medium-padding);
+  font-size: var(--font-size-large);
+  text-align: center;
+  opacity: 0.5;
+}

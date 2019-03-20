@@ -1,0 +1,12 @@
+{
+  "lerna": "2.10.2",
+  "npmClient": "npm",
+  "hoist": true,
+  "ci": true,
+  "packages": [
+    "packages/@vega/*",
+    "packages/@lyra/*",
+    "packages/*"
+  ],
+  "version": "0.2.8"
+}

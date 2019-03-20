@@ -1,0 +1,10 @@
+{
+  "env": {
+    "browser": false,
+    "node": true
+  },
+  "rules": {
+    "import/no-commonjs": "off",
+    "complexity": [1, 18]
+  }
+}

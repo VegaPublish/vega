@@ -1,0 +1,11 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  transform: translateY(-0.1em) scale(1.2);
+  transition: transform 0.2s ease-in-out;
+  margin: 0 0.3em;
+}
+
+.link:hover {
+  transform: translateY(-0.1em) scale(2);
+}

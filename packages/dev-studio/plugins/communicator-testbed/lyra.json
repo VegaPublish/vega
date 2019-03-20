@@ -1,0 +1,12 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@lyra/base/tool",
+      "path": "tool.js"
+    }
+  ]
+}

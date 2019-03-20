@@ -1,0 +1,35 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.header {
+  padding-bottom: var(--small-padding);
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  border: none;
+  background-color: transparent;
+
+  @nest &:active {
+    transform: scale(1.1);
+  }
+
+  @nest &:focus {
+    outline: none;
+  }
+}
+
+.footer {
+  font-size: var(--font-size-small);
+  padding-top: var(--small-padding);
+}
+
+.valueTitle {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-xsmall);
+}

@@ -1,0 +1,3 @@
+.root {
+  composes: resetList from 'part:@lyra/base/theme/layout/helpers';
+}

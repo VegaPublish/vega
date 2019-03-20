@@ -1,0 +1,50 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feed {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: scroll;
+  padding: var(--small-padding);
+  padding-bottom: 5rem;
+  transition: padding 0.15s ease-in-out;
+}
+
+.feedWithWithStickyCreateComment {
+  composes: feed;
+  padding-bottom: 25rem;
+}
+
+.createComment {
+  background-color: white;
+  border: 2px solid #000;
+  border-bottom: none;
+  padding: var(--small-padding);
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  transition: transform 0.2s ease-in-out;
+  width: calc(100% - var(--small-padding));
+  transform: translateY(calc(100% - 4rem));
+  cursor: pointer;
+
+  @nest &:hover {
+    transform: translateY(calc(100% - 5rem));
+  }
+}
+
+.createCommentSticky {
+  composes: createComment;
+  transform: translateY(0);
+  cursor: unset;
+
+  @nest &:hover {
+    transform: translateY(0);
+  }
+}

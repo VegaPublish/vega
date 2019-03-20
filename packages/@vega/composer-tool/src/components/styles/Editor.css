@@ -1,0 +1,16 @@
+.root {
+  margin: 15px 40px 15px 40px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteButton {
+  margin-bottom: 15px;
+}
+
+.deletedMessage {
+  margin: 15px 40px 15px 40px;
+}

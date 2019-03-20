@@ -1,0 +1,46 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  display: block;
+}
+
+.finalDecision {
+  margin-top: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.decision_,
+.decision_reject,
+.decision_publish,
+.decision_publish-with-revisions {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.decision_reject .status {
+   color: var(--state-danger-color);
+}
+
+.decision_publish .status {
+  color: var(--state-success-color);
+}
+
+.decision_publish-with-revisions .status {
+  color: var(--state-success-color);
+}
+
+.finalDecisionCompleted {
+  padding: 2rem;
+  text-align: center;
+}

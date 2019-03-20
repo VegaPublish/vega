@@ -1,0 +1,39 @@
+{
+  "name": "@lyra/color-input",
+  "version": "0.2.5",
+  "description": "Color input",
+  "main": "lib/index.js",
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "prepublishOnly": "lyra-check"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "color-input"
+  ],
+  "dependencies": {
+    "react-color": "^2.13.8",
+    "reactcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "@lyra/check": "^0.2.5",
+    "rimraf": "^2.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

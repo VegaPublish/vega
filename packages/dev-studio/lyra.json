@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "project": {
+    "name": "vega"
+  },
+  "api": {
+    "apiHost": "http://localhost:4000",
+    "dataset": "harlot"
+  },
+  "venues": [
+    {
+      "dataset": "hioa"
+    },
+    {
+      "dataset": "dsq"
+    },
+    {
+      "dataset": "formakademisk"
+    },
+    {
+      "dataset": "harlot",
+      "default": true
+    }
+  ],
+  "plugins": [
+    "@lyra/base",
+    "@lyra/components",
+    "@lyra/default-login",
+    "@lyra/google-maps-input",
+    "@vega/core",
+    "@vega/layout",
+    "@vega/theme",
+    "@vega/communicator-system",
+    "@vega/issues-tool",
+    "@vega/tracks-tool",
+    "@vega/submissions-tool",
+    "@vega/composer-tool",
+    "@vega/review-tool",
+    "@vega/article-state-tool",
+    "@lyra/desk-tool",
+    "@lyra/vision",
+    "@vega/components",
+    "@vega/feature-checklist",
+    "@vega/feature-declaration",
+    "@vega/feature-due-date",
+    "@vega/feature-notifier",
+    "example-notification-provider"
+  ],
+  "parts": [
+    {
+      "name": "part:@lyra/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "name": "part:@vega/stage-feature",
+      "description": "Vega stage features"
+    }
+  ]
+}

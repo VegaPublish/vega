@@ -1,0 +1,28 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.headingLevel_1 {
+  font-size: var(--font-size-large);
+  font-weight: 400;
+}
+
+.headingLevel_2 {
+  font-size: var(--font-size-base);
+  font-weight: 400;
+}
+
+.headingLevel_3 {
+  font-size: var(--font-size-base);
+}
+
+.headingLevel_4 {
+  font-size: var(--font-size-base);
+}
+
+.headingLevel_5 {
+  font-size: var(--font-size-base);
+}
+
+.label {
+  font-size: var(--font-size-base);
+  font-weight: 400;
+}

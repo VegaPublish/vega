@@ -1,0 +1,111 @@
+@import 'part:@lyra/base/theme/variables-style';
+@import 'part:@lyra/base/theme/body-style';
+
+:root {
+  --header-height: 6.5rem;
+  --center-width: 65rem;
+}
+
+:global(body) {
+  @media (--screen-medium) {
+    overflow: hidden;
+  }
+}
+
+.root {
+  display: block;
+}
+
+.header {
+  clear: both;
+  position: relative;
+  z-index: calc(var(--zindex-navbar) + 10);
+  width: 100%;
+  background-color: var(--brand-primary);
+  color: var(--brand-primary--text);
+}
+
+.headerInner {
+  @nest .hideCommunicator & {
+    max-width: var(--center-width);
+    margin: 0 auto;
+  }
+}
+
+.menu {
+  box-sizing: border-box;
+  position: relative;
+  /*box-shadow: 0 0.25rem 0.5rem color(var(--black) a(50%));*/
+  border-bottom: 1px solid color(var(--brand-primary) a(50%));
+  background-color: var(--white);
+  z-index: var(--zindex-navbar);
+  height: 2.5rem;
+  font-size: 0.9rem;
+}
+
+.menus {
+  width: 100%;
+  border-right: 1px solid #ccc;
+  height: 2.5rem;
+  overflow: hidden;
+  display: flex;
+  @nest .hideCommunicator & {
+    width: 100%;
+  }
+}
+
+.toolSelector {
+  flex-grow: 1;
+}
+
+.createMenu {
+  margin: 0;
+  padding: 0;
+  align-self: flex-end;
+}
+
+.toggleCommunicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.menuItem {
+  composes: item from './ToolSelector.css';
+}
+
+.menuLink {
+  composes: toolLink from './ToolSelector.css';
+}
+
+.menuInner {
+  @nest .hideCommunicator & {
+    max-width: var(--center-width);
+    margin: 0 auto;
+  }
+}
+
+.workArea {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  height: calc(100vh - var(--header-height));
+  width: 100vw;
+  overflow: auto;
+}
+
+.workAreaInner {
+  height: 100%;
+  @nest .hideCommunicator & {
+    max-width: var(--center-width);
+    margin: 0 auto;
+  }
+}
+
+.toolContainer {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+}

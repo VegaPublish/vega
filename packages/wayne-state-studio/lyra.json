@@ -1,0 +1,47 @@
+{
+  "root": true,
+  "project": {
+    "name": "wayne-state"
+  },
+  "api": {
+    "apiHost": "http://localhost:4000",
+    "dataset": "wayne"
+  },
+  "plugins": [
+    "@lyra/base",
+    "@lyra/components",
+    "@lyra/default-login",
+    "@lyra/google-maps-input",
+    "@vega/core",
+    "@vega/layout",
+    "@vega/theme",
+    "@vega/communicator-system",
+    "@vega/issues-tool",
+    "@vega/tracks-tool",
+    "@vega/components",
+    "@vega/composer-tool",
+    "@vega/submissions-tool",
+    "@vega/review-tool",
+    "@vega/article-state-tool",
+    "@lyra/desk-tool",
+    "@lyra/vision",
+    "@vega/feature-checklist",
+    "@vega/feature-declaration",
+    "@vega/feature-due-date",
+    "@vega/feature-notifier"
+  ],
+  "parts": [
+    {
+      "name": "part:@lyra/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "name": "part:@vega/stage-feature",
+      "description": "Vega stage features"
+    },
+    {
+      "implements": "part:@lyra/base/login-dialog-content",
+      "path": "./src/components/LoginDialogContent.js"
+    }
+  ]
+}

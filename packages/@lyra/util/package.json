@@ -1,0 +1,45 @@
+{
+  "name": "@lyra/util",
+  "version": "0.2.5",
+  "description": "Utilities shared across projects of Lyra",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test": "mocha test/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "util"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "dependencies": {
+    "fs-extra": "^6.0.1",
+    "lodash": "^4.17.10",
+    "resolve-from": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.0.1",
+    "rimraf": "^2.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

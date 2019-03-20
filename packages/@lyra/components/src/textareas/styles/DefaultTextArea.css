@@ -1,0 +1,26 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  width: 100%;
+  position: relative;
+
+  /* forces bigger dialog when in dialog */
+  composes: largeContent from 'part:@lyra/components/dialogs/default-style';
+}
+
+.textarea {
+  composes: root from 'part:@lyra/base/theme/forms/textarea-style';
+  position: relative;
+  width: 100%;
+}
+
+.clearButton {
+  composes: textarea from 'part:@lyra/base/theme/forms/clear-button-style';
+  z-index: 1;
+  top: 0.35em;
+  right: 0.1em;
+
+  @nest & svg {
+    color: inherit;
+  }
+}

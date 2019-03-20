@@ -1,0 +1,14 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+
+  "parts": [
+    {
+      "name": "part:@lyra/google-maps-input/input/geopoint",
+      "implements": "part:@lyra/form-builder/input/geopoint",
+      "path": "GeopointInput.js"
+    }
+  ]
+}

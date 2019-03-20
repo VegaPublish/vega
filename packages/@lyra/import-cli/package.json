@@ -1,0 +1,47 @@
+{
+  "name": "@lyra/import-cli",
+  "version": "0.2.8",
+  "description": "CLI tool that imports documents from an ndjson file or URL",
+  "main": "lib/lyra-import.js",
+  "bin": {
+    "lyra-import": "./lib/lyra-import.js"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "import-cli"
+  ],
+  "dependencies": {
+    "@lyra/client": "0.2.8",
+    "@lyra/import": "0.2.8",
+    "meow": "^3.7.0",
+    "ora": "^2.1.0",
+    "pretty-ms": "^3.2.0",
+    "simple-get": "^3.0.2"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "publishConfig": {
+    "access": "public"
+  }
+}

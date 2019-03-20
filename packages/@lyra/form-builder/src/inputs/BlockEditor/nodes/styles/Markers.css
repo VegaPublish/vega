@@ -1,0 +1,6 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.markerGroup {
+  display: inline-block;
+  padding-right: var(--small-padding);
+}

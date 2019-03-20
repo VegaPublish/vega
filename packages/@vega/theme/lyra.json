@@ -1,0 +1,20 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@lyra/base/theme/variables/override-style",
+      "path": "styles/variables/override.css"
+    },
+    {
+      "name": "part:@vega/theme/table-style",
+      "description": "Colors for the default stage"
+    },
+    {
+      "implements": "part:@vega/theme/table-style",
+      "path": "styles/table.css"
+    }
+  ]
+}

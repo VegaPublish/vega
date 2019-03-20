@@ -1,0 +1,33 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.resetList {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.resetListItem {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.noLink,
+.resetLink {
+  color: inherit;
+  text-decoration: none;
+
+  @nest &:hover {
+    color: inherit;
+  }
+}
+
+.movingItem {
+  z-index: var(--zindex-moving-item);
+  position: relative;
+  background-color: var(--white);
+  composes: shadow-5dp from 'part:@lyra/base/theme/shadows-style';
+  box-sizing: content-box;
+  overflow: visible;
+}

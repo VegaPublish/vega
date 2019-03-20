@@ -1,0 +1,71 @@
+{
+  "name": "@lyra/desk-tool",
+  "version": "0.2.8",
+  "description": "Tool for managing all sorts of content in a structured manner",
+  "main": "src/plugin.js",
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "example-testbed": "cd examples/testbed && lyra start",
+    "start": "npm run example-testbed",
+    "prepublish": "in-publish && lyra-check || not-in-publish"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "desk-tool"
+  ],
+  "dependencies": {
+    "@lyra/form-builder": "0.2.8",
+    "@lyra/mutator": "^0.2.5",
+    "@lyra/uuid": "0.2.8",
+    "@lyra/validation": "^0.2.5",
+    "classnames": "^2.2.5",
+    "date-fns": "^1.29.0",
+    "diff": "^3.2.0",
+    "element-resize-detector": "^1.1.14",
+    "hashlru": "^2.1.0",
+    "in-publish": "^2.0.0",
+    "lodash": "^4.17.10",
+    "plur": "^3.0.1",
+    "promise-latest": "^1.0.4",
+    "react-click-outside": "^2.3.1",
+    "react-ink": "^6.2.0",
+    "react-json-inspector": "^7.1.1",
+    "react-tiny-virtual-list": "^2.0.5",
+    "react-tippy": "1.2.2",
+    "rxjs": "^6.2.0",
+    "shallow-equals": "^1.0.0"
+  },
+  "devDependencies": {
+    "@lyra/base": "0.2.8",
+    "@lyra/check": "^0.2.5",
+    "@lyra/client": "0.2.8",
+    "@lyra/components": "0.2.8",
+    "@lyra/core": "0.2.8",
+    "history": "^4.6.3",
+    "postcss-cssnext": "^3.0.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "rimraf": "^2.6.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6 || ^16",
+    "react": "^16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "publishConfig": {
+    "access": "public"
+  }
+}

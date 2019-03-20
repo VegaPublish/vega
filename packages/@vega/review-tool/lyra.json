@@ -1,0 +1,44 @@
+{
+  "paths": {
+    "source": "./src",
+    "compiled": "./lib"
+  },
+  "parts": [
+    {
+      "implements": "part:@lyra/base/tool",
+      "path": "index.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/reviewProcess.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/reviewItem.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/reviewBlockContent.js"
+    },
+    {
+      "implements": "part:@lyra/base/schema-type",
+      "description": "Vega schema type",
+      "path": "schema/articleSnapshot.js"
+    },
+    {
+      "name": "part:@vega/review-tool/article-widget",
+      "description": "Summary of review status for an Article"
+    },
+    {
+      "implements": "part:@vega/review-tool/article-widget",
+      "path": "components/ArticleReviewWidget.js"
+    },
+    {
+      "implements": "part:@vega/components/formfields/review-content-block-editor",
+      "path": "components/ReviewContentBlockEditor.js"
+    }
+  ]
+}

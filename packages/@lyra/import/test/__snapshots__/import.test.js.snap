@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accepts a stream as source: employee creation 1`] = `
+Object {
+  "mutations": Array [
+    Object {
+      "create": Object {
+        "_id": "espen",
+        "_type": "employee",
+        "name": "Espen",
+      },
+    },
+    Object {
+      "create": Object {
+        "_id": "pk",
+        "_type": "employee",
+        "name": "Per-Kristian",
+      },
+    },
+  ],
+}
+`;
+
+exports[`accepts an array as source: employee creation 1`] = `
+Object {
+  "mutations": Array [
+    Object {
+      "create": Object {
+        "_id": "espen",
+        "_type": "employee",
+        "name": "Espen",
+      },
+    },
+    Object {
+      "create": Object {
+        "_id": "pk",
+        "_type": "employee",
+        "name": "Per-Kristian",
+      },
+    },
+  ],
+}
+`;
+
+exports[`rejects on missing asset type prefix 1`] = `
+[Error: Asset type is not specified.
+\`_lyraAsset\` values must be prefixed with a type, eg image@url or file@url.
+See document with ID "deadpool", path: image._lyraAsset]
+`;

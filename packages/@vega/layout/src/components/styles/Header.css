@@ -1,0 +1,62 @@
+@import 'part:@lyra/base/theme/variables-style';
+@import 'part:@lyra/base/theme/body-style';
+
+.root {
+  display: flex;
+  height: 4rem;
+  padding: 0 var(--medium-padding);
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 0.75rem;
+  line-height: 4rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  cursor: pointer;
+  width: 195px;
+}
+
+.functions {
+  display: flex;
+  align-items: center;
+}
+
+.notificationsContainer {
+  margin-right: 0.5rem;
+}
+
+.settings {
+  display: block;
+  line-height: 2rem;
+  color: color(var(--white) a(80%));
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  margin: 0 0.75rem;
+  transition: color 0.1s linear;
+
+  @nest &:hover {
+    color: color(var(--white) a(100%));
+  }
+}
+
+.roleSelectorContainer {
+  line-height: 2rem;
+  background-color: color(var(--white) a(20%));
+}
+
+.searchContainer {
+  line-height: 2rem;
+  background-color: color(var(--white) a(20%));
+  border-radius: 0.1rem;
+  flex-grow: 1;
+  flex-basis: 10rem;
+  margin-right: 0.5rem;
+}

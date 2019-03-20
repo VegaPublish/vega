@@ -1,0 +1,52 @@
+{
+  "name": "@lyra/schema",
+  "version": "0.2.5",
+  "description": "",
+  "main": "lib/legacy/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "compile": "babel src --copy-files --out-dir lib",
+    "compile:watch": "npm run compile -- --watch",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "typecheck": "flow check"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "schema"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@lyra/generate-help-url": "^0.2.5",
+    "arrify": "^1.0.1",
+    "humanize-list": "^1.0.1",
+    "json-reduce": "^1.0.0",
+    "leven": "^2.1.0",
+    "lodash": "^4.17.10",
+    "object-inspect": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "6.0.52",
+    "empty": "^0.10.1",
+    "flow-typed": "^2.4.0",
+    "jest": "^23.4.2",
+    "recursive-readdir": "^2.1.0",
+    "rimraf": "^2.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

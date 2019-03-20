@@ -1,0 +1,23 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftPane {
+  box-sizing: border-box;
+  width: 50%;
+  padding: var(--medium-padding);
+}
+
+.rightPane {
+  box-sizing: border-box;
+  width: 50%;
+  padding: var(--medium-padding);
+}
+
+.thankYou {
+  padding: 1rem;
+  text-align: center;
+}

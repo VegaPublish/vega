@@ -1,0 +1,35 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  padding: var(--medium-padding) 0;
+}
+
+.reviewProcessesListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--body-bg);
+  padding: var(--small-padding) 0;
+  font-size: var(--font-size-small);
+
+  @nest & > div {
+    margin-right: 1em;
+  }
+  
+  @nest & > div:last-child {
+    margin-right: 0;
+  }
+}
+
+.reviewProcessesListItemDate {
+  font-size: var(--font-size-xsmall);
+}
+
+.createNewReview {
+  padding: var(--medium-padding);
+  text-align: center;
+}
+
+.decision {
+  font-weight: 600;
+}

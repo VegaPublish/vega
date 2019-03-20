@@ -1,0 +1,32 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.root {
+  border: 1px solid var(--brand-primary);
+}
+
+.heading {
+  padding: 8px 8px 0px 8px;
+}
+
+.roleList {
+  margin: 0px;
+  padding: 0px;
+}
+
+.roleListItem {
+  color: black;
+  background-color: white;
+  padding-left: 5px;
+  list-style: none;
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.selectedRoleListItem {
+  composes: roleListItem;
+  background-color: #ee8a00;
+  &:hover {
+    background-color: #eebc01;
+  }
+}

@@ -1,0 +1,23 @@
+.root {
+  display: inline-block;
+  align-self: flex-end;
+}
+
+.input {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.link {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  font-size: 0.75em;
+
+  @nest &:hover {
+    background-color: #ddd;
+  }
+}

@@ -1,0 +1,170 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.minimizedHeight {
+}
+
+.article {
+  position: relative;
+}
+
+.maximizedArticle {
+  composes: article;
+}
+
+.minimizedArticle {
+  composes: article;
+}
+
+.clickArea {
+  display: flex;
+  align-items: center;
+}
+
+.mainImageContainer {
+  width: 3em;
+  height: 2em;
+  margin-right: 0.5em;
+  position: relative;
+  border: 1px solid var(--gray-light);
+  background-color: var(--gray-light);
+}
+
+.mainImage {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.stageDot {
+  margin-left: auto;
+}
+
+.content {
+}
+
+.abstract {
+  clear: both;
+  line-height: 1.4em;
+  padding: var(--medium-padding) 0;
+}
+
+.title {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-weight: 600;
+  line-height: 1.1em;
+}
+
+.headLineAuthors {
+  margin: 0;
+  font-size: 0.75em;
+  color: #999;
+}
+
+.clickArea {
+  user-select: none;
+  cursor: default;
+  overflow: hidden;
+}
+
+.headLines {
+  font-size: 0.75em;
+  margin: 0;
+  padding: 0;
+}
+
+.authors {
+  display: inline;
+  padding: 0;
+  margin: 0;
+
+  @nest & li {
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+  }
+}
+
+.submitters {
+  display: inline;
+  padding: 0;
+  margin: 0;
+
+  @nest & li {
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+  }
+}
+
+.loadingContainer {
+  position: absolute;
+  background-color: color(var(--white) a(90%));
+  top: 0;
+  left: 0;
+  width: calc(100% + var(--medium-padding));
+  height: 100%;
+  box-sizing: border-box;
+  margin: calc(var(--medium-padding) * -0.5);
+  z-index: 1;
+}
+
+.spinnerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.meta {
+  line-height: 2.5em;
+  position: relative;
+  margin-top: var(--medium-padding);
+  clear: both;
+}
+
+.functions {
+  font-size: 0.8rem;
+  margin-top: var(--medium-padding);
+  margin-bottom: var(--large-padding);
+  height: 1rem;
+  clear: both;
+}
+
+.stageLabel {
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: calc(1em / 0.5);
+  padding: 0 1em;
+}
+
+.stageLabel__unknown {
+  background-color: #999;
+  color: #fff;
+}
+
+.primaryFunctions {
+  display: block;
+}
+
+.secondaryFunctions {
+  float: left;
+}
+
+.acceptButton {
+  @nest .article & {
+    color: var(--state-info-color);
+  }
+}
+
+.declineButton {
+  @nest .article & {
+    color: var(--state-danger-color);
+  }
+}
+
+.openInEditorButton {
+}

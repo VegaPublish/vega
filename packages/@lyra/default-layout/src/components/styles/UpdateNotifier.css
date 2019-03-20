@@ -1,0 +1,69 @@
+@import 'part:@lyra/base/theme/variables-style';
+
+.container {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 5rem;
+  font-size: var(--font-size-xsmall);
+  color: color(var(--white) a(50%));
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  padding: 0 var(--small-padding);
+
+  @media (--screen-medium) {
+    display: flex;
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.9;
+  text-align: center;
+  overflow: hidden;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+  outline: none !important;
+  border: none;
+
+  @nest &:active {
+    opacity: 1;
+  }
+
+  @nest &:hover {
+    opacity: 1;
+  }
+}
+
+.warningIcon {
+  font-size: 1.5em;
+}
+
+.critical {
+  composes: button;
+  color: var(--state-danger-color);
+}
+
+.warning {
+  composes: button;
+  color: var(--state-warning-color);
+}
+
+.notice {
+  composes: button;
+  color: var(--state-info-color);
+}
+
+.upToDateText {
+  color: color(var(--white) a(40%));
+}

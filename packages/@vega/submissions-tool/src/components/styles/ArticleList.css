@@ -1,0 +1,50 @@
+.root {
+  margin-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.articleContainer {
+  float: left;
+  background-color: #ddd;
+  width: 90vw;
+  padding: 20px;
+  margin: 0px 10px 10px 0px;
+}
+
+.mainImageContainer {
+  float: left;
+  margin-right: 20px;
+}
+
+.heading {
+  float: left;
+  @nest & .title {
+    margin-top: 0px;
+  }
+}
+
+.stageInfoContainer {
+  clear: both;
+  @nest & h4 {
+    display: inline;
+  }
+  @nest & a {
+    display: inline-block;
+    margin-top: 8px;
+  }
+}
+.currentStage {
+  background-color: #888;
+  border-radius: 2px;
+  padding: 2px 5px 2px 5px;
+  color: #eee;
+}
+
+.stage {
+  color: #888;
+  padding: 2px 5px 2px 5px;
+}

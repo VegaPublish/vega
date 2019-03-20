@@ -1,0 +1,58 @@
+{
+  "name": "@vega/dev-studio",
+  "private": true,
+  "version": "0.2.8",
+  "description": "",
+  "main": "package.json",
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "lyra start"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "dev-studio"
+  ],
+  "dependencies": {
+    "@lyra/base": "0.2.8",
+    "@lyra/cli": "0.2.8",
+    "@lyra/components": "0.2.8",
+    "@lyra/core": "0.2.8",
+    "@lyra/default-login": "^0.2.5",
+    "@lyra/desk-tool": "0.2.8",
+    "@lyra/google-maps-input": "0.2.8",
+    "@lyra/vision": "0.2.8",
+    "@vega/article-state-tool": "0.2.6",
+    "@vega/communicator-system": "0.2.8",
+    "@vega/components": "0.2.6",
+    "@vega/composer-tool": "0.2.8",
+    "@vega/core": "0.2.8",
+    "@vega/feature-checklist": "0.2.8",
+    "@vega/feature-declaration": "0.2.8",
+    "@vega/feature-due-date": "0.2.8",
+    "@vega/feature-notifier": "0.2.8",
+    "@vega/issues-tool": "0.2.8",
+    "@vega/layout": "0.2.6",
+    "@vega/review-tool": "0.2.8",
+    "@vega/submissions-tool": "0.2.8",
+    "@vega/theme": "^0.2.5",
+    "@vega/tracks-tool": "0.2.8",
+    "@vega/utils": "0.2.6",
+    "humanize-list": "^1.0.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  }
+}

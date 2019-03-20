@@ -1,0 +1,52 @@
+{
+  "name": "@lyra/resolver",
+  "version": "0.2.5",
+  "description": "Resolves parts and plugins from a Lyra configuration",
+  "main": "lib/resolver.js",
+  "scripts": {
+    "clean": "rimraf lib coverage",
+    "coverage": "nyc --report=lcov --report=text _mocha -- test/**/*.test.js",
+    "test": "mocha test/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegaPublish/vega.git"
+  },
+  "keywords": [
+    "vega",
+    "vegapublish",
+    "realtime",
+    "content",
+    "open access publishing",
+    "resolver"
+  ],
+  "author": "Vega <hello@vegapublish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegaPublish/vega/issues"
+  },
+  "homepage": "http://vegapublish.com/",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.0.1",
+    "mock-fs": "^4.4.2",
+    "nyc": "^11.0.3",
+    "proxyquire": "^1.7.10",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "@lyra/generate-help-url": "^0.2.5",
+    "@lyra/util": "^0.2.5",
+    "fs-extra": "^6.0.1",
+    "lodash": "^4.17.10",
+    "path-exists": "^3.0.0",
+    "promise-props-recursive": "^1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
