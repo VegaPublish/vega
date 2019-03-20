@@ -1,4 +1,4 @@
 module.exports = {
   clean: require('./clean'),
-  'example-journal': require('./exampleJournal')
+  'example-venue': require('./exampleVenue')
 }

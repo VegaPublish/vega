@@ -62,7 +62,7 @@ function loadProps(props$) {
         'authors',
         'abstract',
         'stage.displayColor',
-        'mainImage'
+        'mainImage.asset.url'
       ]).pipe(
         map(article => ({
           ...props,
@@ -96,7 +96,7 @@ export default withPropsStream(
 
     render() {
       const {article, isOpen, showIssues} = this.props
-      // TODO: fix main image url
+
       return (
         <div
           className={isOpen ? styles.maximizedArticle : styles.minimizedArticle}

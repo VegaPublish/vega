@@ -110,7 +110,10 @@ function loadProps(props$): Observable<Props> {
 
   const featuresWithState$ = article$.pipe(
     switchMap(article =>
-      materializeFeatures(article._id, article.currentTrackStage.features)
+      materializeFeatures(
+        article._id,
+        get(article, 'currentTrackStage.features')
+      )
     )
   )
 
@@ -285,14 +288,15 @@ export default withPropsStream(
                       </IntentLink>
                       ]
                     </h3>
-                    {!hasPendingTasks && hasNextStage && (
-                      <a
-                        onClick={this.handleAdvanceToNextStage}
-                        className={styles.stageAdvanceLink}
-                      >
-                        Advance to next stage →
-                      </a>
-                    )}
+                    {!hasPendingTasks &&
+                      hasNextStage && (
+                        <a
+                          onClick={this.handleAdvanceToNextStage}
+                          className={styles.stageAdvanceLink}
+                        >
+                          Advance to next stage →
+                        </a>
+                      )}
                     {hasPendingTasks &&
                       article.isReadyToAdvance &&
                       hasNextStage && (
@@ -311,16 +315,18 @@ export default withPropsStream(
                           Complete tasks to advance
                         </div>
                       )}
-                    {hasPendingTasks && !hasNextStage && (
-                      <div className={styles.stageAdvanceLinkDisabled}>
-                        All done when pending tasks are completed
-                      </div>
-                    )}
-                    {!hasPendingTasks && !hasNextStage && (
-                      <div className={styles.stageAdvanceLinkDisabled}>
-                        All done!
-                      </div>
-                    )}
+                    {hasPendingTasks &&
+                      !hasNextStage && (
+                        <div className={styles.stageAdvanceLinkDisabled}>
+                          All done when pending tasks are completed
+                        </div>
+                      )}
+                    {!hasPendingTasks &&
+                      !hasNextStage && (
+                        <div className={styles.stageAdvanceLinkDisabled}>
+                          All done!
+                        </div>
+                      )}
                   </div>
                 )
               }

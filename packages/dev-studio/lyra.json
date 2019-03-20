@@ -4,21 +4,12 @@
     "name": "vega"
   },
   "api": {
-    "apiHost": "http://localhost:4000",
-    "dataset": "harlot"
+    "apiHost": "http://127.0.0.1:4000",
+    "dataset": "bugs"
   },
   "venues": [
     {
-      "dataset": "hioa"
-    },
-    {
-      "dataset": "dsq"
-    },
-    {
-      "dataset": "formakademisk"
-    },
-    {
-      "dataset": "harlot",
+      "dataset": "bugs",
       "default": true
     }
   ],

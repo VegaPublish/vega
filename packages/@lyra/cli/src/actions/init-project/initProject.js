@@ -118,8 +118,8 @@ export default async function initLyra(args, context) {
       type: 'list',
       choices: [
         {
-          value: 'example-journal',
-          name: 'Example journal (with sample plugins)'
+          value: 'example-venue',
+          name: 'Example venue (with sample plugins)'
         },
         {
           value: 'clean',
