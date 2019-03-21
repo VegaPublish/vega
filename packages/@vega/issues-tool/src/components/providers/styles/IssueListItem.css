@@ -30,15 +30,16 @@
   cursor: default;
   width: 100%;
   vertical-align: text-top;
+  position: relative;
 }
 
 .headerData {
-  display: inline-flex;
+  display: flex;
   cursor: default;
   align-items: center;
   user-select: none;
-  width: 66%;
   padding: 5px;
+  max-width: calc(100% - 18rem);
 
   @nest &:hover {
     background-color: #fafafa;
@@ -50,6 +51,8 @@
   margin-left: auto;
   align-items: center;
   justify-content: flex-end;
+  flex-grow: 1;
+  flex-basis: 20rem;
 }
 
 .openIssueInEditorLink {
@@ -65,9 +68,9 @@
   }
 }
 
-.publishIssueButton {
-  margin-top: 7px;
-  margin-right: 10px;
+.issueActions {
+  display: flex;
+  margin-right: 1em;
 }
 
 .content {

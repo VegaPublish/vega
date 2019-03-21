@@ -211,15 +211,15 @@ class IssueListItem extends React.Component<Props> {
               </div>
             )}
 
-            {isOpen && content.length && (
-              <RequirePermission
-                action="update"
-                subject={{_type: 'venue', _id: 'venue'}}
-              >
-                {({permissionGranted}) =>
-                  permissionGranted && (
-                    <span>
-                      <span className={styles.publishIssueButton}>
+            {isOpen &&
+              content.length && (
+                <RequirePermission
+                  action="update"
+                  subject={{_type: 'venue', _id: 'venue'}}
+                >
+                  {({permissionGranted}) =>
+                    permissionGranted && (
+                      <div className={styles.issueActions}>
                         <Button
                           onClick={this.handlePublishIssue}
                           title="Publish this issue"
@@ -228,9 +228,7 @@ class IssueListItem extends React.Component<Props> {
                         >
                           Publish
                         </Button>
-                      </span>
-                      {issue.publishedAt && (
-                        <span className={styles.publishIssueButton}>
+                        {issue.publishedAt && (
                           <Button
                             onClick={this.handleUnpublishIssue}
                             title="Unpublish this issue"
@@ -239,13 +237,12 @@ class IssueListItem extends React.Component<Props> {
                           >
                             Unpublish
                           </Button>
-                        </span>
-                      )}
-                    </span>
-                  )
-                }
-              </RequirePermission>
-            )}
+                        )}
+                      </div>
+                    )
+                  }
+                </RequirePermission>
+              )}
 
             <RequirePermission action="update" subject={issue}>
               {({permissionGranted}) =>
@@ -271,16 +268,18 @@ class IssueListItem extends React.Component<Props> {
           />
         )}
 
-        {isOpen && error && (
-          <div>
-            <h2>Got some errors</h2>
-            <pre>{JSON.stringify(error, null, 2)}</pre>
-          </div>
-        )}
+        {isOpen &&
+          error && (
+            <div>
+              <h2>Got some errors</h2>
+              <pre>{JSON.stringify(error, null, 2)}</pre>
+            </div>
+          )}
 
-        {isOpen && !content.length && (
-          <div className={styles.noSections}>No sections yet</div>
-        )}
+        {isOpen &&
+          !content.length && (
+            <div className={styles.noSections}>No sections yet</div>
+          )}
 
         <div className={styles.content}>
           <AnimateHeight
@@ -303,13 +302,14 @@ class IssueListItem extends React.Component<Props> {
                       >
                         {section.title || 'Unknown title'}
                       </h4>
-                      {isOpen && section.articles && (
-                        <ArticleList
-                          articles={section.articles}
-                          openArticleId={openArticleId}
-                          onToggleArticle={onToggleArticle}
-                        />
-                      )}
+                      {isOpen &&
+                        section.articles && (
+                          <ArticleList
+                            articles={section.articles}
+                            openArticleId={openArticleId}
+                            onToggleArticle={onToggleArticle}
+                          />
+                        )}
                     </li>
                   )
                 })}
