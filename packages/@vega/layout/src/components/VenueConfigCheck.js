@@ -34,7 +34,8 @@ function ConfigError(props) {
 
 function VenueConfigCheck(props: Props) {
   const {children, currentVenue} = props
-  if (!currentVenue._id) {
+
+  if (!currentVenue) {
     const venueName = capitalize(currentVenue.dataset)
     return __DEV__ ? (
       <div>
@@ -49,7 +50,7 @@ function VenueConfigCheck(props: Props) {
       </div>
     ) : (
       <div>
-        No such venue: <code>{currentVenue._id}</code>
+        No such venue: <code>{JSON.stringify(currentVenue, null, 2)}</code>
       </div>
     )
   }
