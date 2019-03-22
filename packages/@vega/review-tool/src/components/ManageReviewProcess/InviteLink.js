@@ -20,7 +20,7 @@ function loadProps(props$) {
 class InviteLink extends React.PureComponent<*> {
   render() {
     const {invite, currentVenue} = this.props
-    const inviteLink = resolveInviteLink(currentVenue._id, invite._id)
+    const inviteLink = resolveInviteLink(currentVenue.dataset, invite._id)
     return invite ? (
       <CopyInput content={inviteLink} />
     ) : (
