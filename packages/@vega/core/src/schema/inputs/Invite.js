@@ -84,7 +84,7 @@ export default withPropsStream(
             <div key={invite._id}>
               <div className={styles.buttonCollection}>
                 <CopyInput
-                  content={resolveInviteLink(currentVenue._id, invite._id)}
+                  content={resolveInviteLink(currentVenue.dataset, invite._id)}
                 />
                 <Button
                   color="danger"
