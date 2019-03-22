@@ -13,5 +13,10 @@ export function unpublishIssue(issueId) {
 
 export function fetchPublishStatus(issueId) {
   const url = `/publish/${lyraClient.config().dataset}/${issueId}/status`
-  return lyraClient.request({uri: url, method: 'get'})
+  return lyraClient.request({uri: url, method: 'get'}).catch(error => {
+    if (error.statusCode === 401) {
+      return error.response.body
+    }
+    return Promise.reject(error)
+  })
 }

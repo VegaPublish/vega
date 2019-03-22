@@ -73,7 +73,8 @@ type Props = {
   onToggleArticle: (articleId: string) => void,
   openArticleId: string,
   publishStatus: any,
-  issue: Issue
+  issue: Issue,
+  hidePublishStatus: boolean
 }
 const loadProps = props$ => {
   const issue$ = props$.pipe(
@@ -99,7 +100,10 @@ const loadProps = props$ => {
   )
   return combineLatest(props$, issue$, publishStatus$).pipe(
     map(([props, issue, publishStatus]) => {
-      return {...props, issue, publishStatus}
+      if (publishStatus.error === 'Unauthorized') {
+        return {...props, issue, publishStatus: null, hidePublishStatus: true}
+      }
+      return {...props, issue, publishStatus, hidePublishStatus: false}
     })
   )
 }
@@ -168,7 +172,8 @@ class IssueListItem extends React.Component<Props> {
       openArticleId,
       publishStatus,
       onToggleArticle,
-      isOpen
+      isOpen,
+      hidePublishStatus
     } = this.props
     const {error, waitingForResponse} = this.state
     const content = issue.content || []
@@ -261,12 +266,13 @@ class IssueListItem extends React.Component<Props> {
           </div>
         </div>
 
-        {isOpen && (
-          <IssuePublishStatus
-            publishStatus={publishStatus}
-            lastPublishedAt={issue.publishedAt}
-          />
-        )}
+        {isOpen &&
+          !hidePublishStatus && (
+            <IssuePublishStatus
+              publishStatus={publishStatus}
+              lastPublishedAt={issue.publishedAt}
+            />
+          )}
 
         {isOpen &&
           error && (
