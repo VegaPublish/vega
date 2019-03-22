@@ -1,6 +1,6 @@
 {
   "name": "@lyra/components",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "Basic UX components",
   "main": "lib/index.js",
   "author": "Vega <hello@vegapublish.com>",
@@ -18,7 +18,7 @@
     "components"
   ],
   "dependencies": {
-    "@lyra/imagetool": "^0.2.5",
+    "@lyra/imagetool": "0.3.0",
     "attr-accept": "^1.1.0",
     "canvas-to-blob": "^0.0.0",
     "chance": "^1.0.4",
@@ -54,9 +54,9 @@
     "scroll": "^2.0.0"
   },
   "devDependencies": {
-    "@lyra/base": "0.2.8",
-    "@lyra/check": "^0.2.5",
-    "@lyra/core": "0.2.8",
+    "@lyra/base": "0.3.0",
+    "@lyra/check": "0.3.0",
+    "@lyra/core": "0.3.0",
     "pre-commit": "^1.2.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",

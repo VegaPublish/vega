@@ -1,6 +1,6 @@
 {
   "name": "@lyra/schema",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "",
   "main": "lib/legacy/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/generate-help-url": "^0.2.5",
+    "@lyra/generate-help-url": "0.3.0",
     "arrify": "^1.0.1",
     "humanize-list": "^1.0.1",
     "json-reduce": "^1.0.0",

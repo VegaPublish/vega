@@ -1,6 +1,6 @@
 {
   "name": "@vega/issues-tool",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,10 +17,10 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/image-url": "0.2.6",
-    "@lyra/uuid": "0.2.8",
-    "@vega/components": "0.2.6",
-    "@vega/utils": "0.2.6",
+    "@lyra/image-url": "0.3.0",
+    "@lyra/uuid": "0.3.0",
+    "@vega/components": "0.3.0",
+    "@vega/utils": "0.3.0",
     "classnames": "^2.2.5",
     "react-animate-height": "^2.0.1",
     "react-motion": "^0.5.2",

@@ -1,6 +1,6 @@
 {
   "name": "@vega/submissions-tool",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/base": "0.2.8",
-    "@vega/utils": "0.2.6",
+    "@lyra/base": "0.3.0",
+    "@vega/utils": "0.3.0",
     "date-fns": "^1.29.0",
     "humanize-list": "^1.0.1",
     "lodash": "^4.17.10"

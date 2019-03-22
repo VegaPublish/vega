@@ -1,7 +1,7 @@
 {
   "name": "@lyra/block-content-to-html",
   "description": "Function for transforming Lyra block content to HTML",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "main": "lib/blocksToHtml.js",
   "umd": "umd/blocksToHtml.min.js",
   "unpkg": "umd/blocksToHtml.min.js",
@@ -29,10 +29,10 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/block-content-to-hyperscript": "0.2.6"
+    "@lyra/block-content-to-hyperscript": "0.3.0"
   },
   "devDependencies": {
-    "@lyra/block-content-tests": "^0.2.5",
+    "@lyra/block-content-tests": "0.3.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.5",
     "babel-preset-env": "^1.7.0",

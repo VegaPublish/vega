@@ -1,6 +1,6 @@
 {
   "name": "@lyra/validation",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Validation and warning infrastructure for Lyra projects",
   "main": "lib/index.js",
   "scripts": {

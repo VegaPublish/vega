@@ -1,6 +1,6 @@
 {
   "name": "@lyra/block-content-tests",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Tests for shared block content rendering logic",
   "main": "tests.js",
   "scripts": {

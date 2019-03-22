@@ -1,6 +1,6 @@
 {
   "name": "@vega/feature-notifier",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/base": "0.2.8",
-    "@lyra/image-url": "0.2.6",
+    "@lyra/base": "0.3.0",
+    "@lyra/image-url": "0.3.0",
     "lodash": "^4.17.10",
     "rxjs": "^6.2.0"
   },

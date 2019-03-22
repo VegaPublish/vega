@@ -1,6 +1,6 @@
 {
   "name": "@lyra/uuid",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "Simple generation of lyra document IDs",
   "main": "index.js",
   "keywords": [

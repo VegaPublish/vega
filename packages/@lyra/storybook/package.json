@@ -1,6 +1,6 @@
 {
   "name": "@lyra/storybook",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Lyra plugin for running react-storybook in a Lyra studio",
   "main": "./lib/index.js",
   "scripts": {},
@@ -23,8 +23,8 @@
   },
   "homepage": "http://vegapublish.com/",
   "dependencies": {
-    "@lyra/server": "0.2.6",
-    "@lyra/webpack-integration": "^0.2.5",
+    "@lyra/server": "0.3.0",
+    "@lyra/webpack-integration": "0.3.0",
     "@storybook/addon-knobs": "^3.2.8",
     "@storybook/addons": "^3.2.6",
     "@storybook/react": "3.2.8",

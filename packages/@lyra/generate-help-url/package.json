@@ -1,6 +1,6 @@
 {
   "name": "@lyra/generate-help-url",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Generates URLs to specific sections of the Lyra documentation",
   "main": "index.js",
   "scripts": {

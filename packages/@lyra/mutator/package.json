@@ -1,6 +1,6 @@
 {
   "name": "@lyra/mutator",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "A set of models to make it easier to utilize the powerful real time collaborative features of Lyra",
   "main": "lib/index.js",
   "scripts": {

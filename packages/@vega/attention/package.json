@@ -1,6 +1,6 @@
 {
   "name": "@vega/attention",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Common utilities",
   "main": "index.js",
   "scripts": {

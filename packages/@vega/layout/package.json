@@ -1,6 +1,6 @@
 {
   "name": "@vega/layout",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,9 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/generate-help-url": "^0.2.5",
-    "@vega/components": "0.2.6",
-    "@vega/utils": "0.2.6",
+    "@lyra/generate-help-url": "0.3.0",
+    "@vega/components": "0.3.0",
+    "@vega/utils": "0.3.0",
     "date-fns": "^1.29.0",
     "numbered": "^1.1.0",
     "react-click-outside": "^2.3.1",

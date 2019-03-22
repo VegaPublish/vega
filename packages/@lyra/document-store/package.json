@@ -1,6 +1,6 @@
 {
   "name": "@lyra/document-store",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/mutator": "^0.2.5",
+    "@lyra/mutator": "0.3.0",
     "lodash": "^4.17.10",
     "nano-pubsub": "^1.0.2",
     "rxjs": "^6.2.0"

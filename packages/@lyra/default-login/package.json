@@ -1,6 +1,6 @@
 {
   "name": "@lyra/default-login",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Lets the user log in to Lyra.",
   "main": "lib/index.js",
   "author": "Vega <hello@vegapublish.com>",
@@ -19,13 +19,13 @@
     "default-login"
   ],
   "dependencies": {
-    "@lyra/generate-help-url": "^0.2.5",
+    "@lyra/generate-help-url": "0.3.0",
     "in-publish": "^2.0.0",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
-    "@lyra/check": "^0.2.5",
-    "@lyra/resolver": "^0.2.5",
+    "@lyra/check": "0.3.0",
+    "@lyra/resolver": "0.3.0",
     "rimraf": "^2.6.2"
   },
   "repository": {

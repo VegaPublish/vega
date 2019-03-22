@@ -1,6 +1,6 @@
 {
   "name": "@vega/article-state-tool",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@vega/components": "0.2.6",
-    "@vega/utils": "0.2.6",
+    "@vega/components": "0.3.0",
+    "@vega/utils": "0.3.0",
     "react-props-stream": "^1.0.0"
   },
   "devDependencies": {

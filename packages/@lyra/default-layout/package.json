@@ -1,6 +1,6 @@
 {
   "name": "@lyra/default-layout",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "The default layout components for Lyra",
   "main": "lib/default-layout.js",
   "scripts": {
@@ -28,19 +28,19 @@
   },
   "homepage": "http://vegapublish.com/",
   "dependencies": {
-    "@lyra/generate-help-url": "^0.2.5",
+    "@lyra/generate-help-url": "0.3.0",
     "lodash": "^4.17.10",
     "react-click-outside": "^2.3.1",
     "react-ink": "^6.2.0",
     "rxjs": "^6.2.0"
   },
   "devDependencies": {
-    "@lyra/base": "0.2.8",
-    "@lyra/check": "^0.2.5",
-    "@lyra/cli": "0.2.8",
-    "@lyra/components": "0.2.8",
-    "@lyra/core": "0.2.8",
-    "@lyra/schema": "^0.2.5",
+    "@lyra/base": "0.3.0",
+    "@lyra/check": "0.3.0",
+    "@lyra/cli": "0.3.0",
+    "@lyra/components": "0.3.0",
+    "@lyra/core": "0.3.0",
+    "@lyra/schema": "0.3.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "in-publish": "^2.0.0",

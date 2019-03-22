@@ -1,6 +1,6 @@
 {
   "name": "@lyra/server",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Webserver dedicated to serving Lyra, allowing a smooth development experience",
   "main": "lib/server.js",
   "scripts": {
@@ -33,9 +33,9 @@
   },
   "homepage": "http://vegapublish.com/",
   "dependencies": {
-    "@lyra/resolver": "^0.2.5",
-    "@lyra/webpack-integration": "^0.2.5",
-    "@lyra/webpack-loader": "^0.2.5",
+    "@lyra/resolver": "0.3.0",
+    "@lyra/webpack-integration": "0.3.0",
+    "@lyra/webpack-loader": "0.3.0",
     "@sanity/css-loader": "^0.28.11",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

@@ -1,6 +1,6 @@
 {
   "name": "@lyra/image-url",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Tools to generate image urls from Lyra content",
   "main": "index.js",
   "umd": "umd/lyraImageUrl.min.js",

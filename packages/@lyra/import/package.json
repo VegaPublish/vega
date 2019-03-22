@@ -1,6 +1,6 @@
 {
   "name": "@lyra/import",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "Import documents to a Lyra dataset",
   "main": "lib/import.js",
   "engines": {
@@ -21,8 +21,8 @@
     "import"
   ],
   "dependencies": {
-    "@lyra/mutator": "^0.2.5",
-    "@lyra/uuid": "0.2.8",
+    "@lyra/mutator": "0.3.0",
+    "@lyra/uuid": "0.3.0",
     "debug": "^3.1.0",
     "file-url": "^2.0.2",
     "fs-extra": "^6.0.1",
@@ -38,7 +38,7 @@
     "tar-fs": "^1.16.0"
   },
   "devDependencies": {
-    "@lyra/client": "0.2.8",
+    "@lyra/client": "0.3.0",
     "get-it": "^4.0.1",
     "jest": "^23.4.2",
     "rimraf": "^2.6.2"

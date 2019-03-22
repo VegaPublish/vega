@@ -1,16 +1,16 @@
 {
   "name": "@vega/core",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf lib"
   },
   "dependencies": {
-    "@lyra/image-url": "0.2.6",
-    "@lyra/uuid": "0.2.8",
-    "@vega/components": "0.2.6",
-    "@vega/utils": "0.2.6",
+    "@lyra/image-url": "0.3.0",
+    "@lyra/uuid": "0.3.0",
+    "@vega/components": "0.3.0",
+    "@vega/utils": "0.3.0",
     "js-video-url-parser": "^0.2.7",
     "lodash": "^4.17.10",
     "rxjs": "^6.2.0"

@@ -1,6 +1,6 @@
 {
   "name": "@lyra/import-cli",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "CLI tool that imports documents from an ndjson file or URL",
   "main": "lib/lyra-import.js",
   "bin": {
@@ -23,8 +23,8 @@
     "import-cli"
   ],
   "dependencies": {
-    "@lyra/client": "0.2.8",
-    "@lyra/import": "0.2.8",
+    "@lyra/client": "0.3.0",
+    "@lyra/import": "0.3.0",
     "meow": "^3.7.0",
     "ora": "^2.1.0",
     "pretty-ms": "^3.2.0",

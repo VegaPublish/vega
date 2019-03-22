@@ -1,6 +1,6 @@
 {
   "name": "@vega/utils",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Common utilities",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/image-url": "0.2.6",
-    "@lyra/mutator": "^0.2.5",
+    "@lyra/image-url": "0.3.0",
+    "@lyra/mutator": "0.3.0",
     "recompose": "^0.26.0",
     "rxjs": "^6.2.0",
     "shallow-equals": "^1.0.0"

@@ -1,7 +1,7 @@
 {
   "name": "@lyra/block-content-to-hyperscript",
   "description": "Function for transforming Lyra block content to HyperScript",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "main": "lib/index.js",
   "umd": "umd/blocksToHyperScript.min.js",
   "unpkg": "umd/blocksToHyperScript.min.js",
@@ -26,13 +26,13 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/generate-help-url": "^0.2.5",
-    "@lyra/image-url": "0.2.6",
+    "@lyra/generate-help-url": "0.3.0",
+    "@lyra/image-url": "0.3.0",
     "hyperscript": "^2.0.2",
     "object-assign": "^4.1.1"
   },
   "devDependencies": {
-    "@lyra/block-content-tests": "^0.2.5",
+    "@lyra/block-content-tests": "0.3.0",
     "browserify": "^16.2.2",
     "envify": "^4.1.0",
     "eslint": "^4.19.1",

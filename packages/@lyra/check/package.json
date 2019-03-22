@@ -1,6 +1,6 @@
 {
   "name": "@lyra/check",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Lyra check Lyra plugins and projects",
   "main": "src/lyraCheck.js",
   "bin": {
@@ -23,8 +23,8 @@
     "check"
   ],
   "dependencies": {
-    "@lyra/generate-help-url": "^0.2.5",
-    "@lyra/resolver": "^0.2.5",
+    "@lyra/generate-help-url": "0.3.0",
+    "@lyra/resolver": "0.3.0",
     "chalk": "^2.4.0",
     "fs-extra": "^6.0.1",
     "in-publish": "^2.0.0",

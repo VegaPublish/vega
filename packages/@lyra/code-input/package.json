@@ -1,6 +1,6 @@
 {
   "name": "@lyra/code-input",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Ace editor for editing code",
   "main": "lib/index.js",
   "author": "Vega <hello@vegapublish.com>",
@@ -22,7 +22,7 @@
     "react-ace": "^5.0.1"
   },
   "devDependencies": {
-    "@lyra/check": "^0.2.5",
+    "@lyra/check": "0.3.0",
     "rimraf": "^2.6.2"
   },
   "bugs": {

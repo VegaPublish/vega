@@ -1,6 +1,6 @@
 {
   "name": "@lyra/preview",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Utilities for previewing content in Lyra",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "url": "https://github.com/VegaPublish/vega/issues"
   },
   "dependencies": {
-    "@lyra/image-url": "0.2.6",
+    "@lyra/image-url": "0.3.0",
     "lodash": "^4.17.10",
     "observable-props": "^2.0.0",
     "rxjs": "^6.2.0",

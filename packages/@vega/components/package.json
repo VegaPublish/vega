@@ -1,6 +1,6 @@
 {
   "name": "@vega/components",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/block-content-to-react": "0.2.6",
+    "@lyra/block-content-to-react": "0.3.0",
     "classnames": "^2.2.5",
     "copy-text-to-clipboard": "^1.0.4",
     "humanize-list": "^1.0.1",

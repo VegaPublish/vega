@@ -1,6 +1,6 @@
 {
   "name": "@vega/communicator-system",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,12 +17,12 @@
   "author": "Vega <hello@vegapublish.com>",
   "license": "MIT",
   "dependencies": {
-    "@lyra/block-content-to-react": "0.2.6",
-    "@lyra/mutator": "^0.2.5",
-    "@lyra/preview": "0.2.6",
-    "@lyra/uuid": "0.2.8",
-    "@vega/components": "0.2.6",
-    "@vega/utils": "0.2.6",
+    "@lyra/block-content-to-react": "0.3.0",
+    "@lyra/mutator": "0.3.0",
+    "@lyra/preview": "0.3.0",
+    "@lyra/uuid": "0.3.0",
+    "@vega/components": "0.3.0",
+    "@vega/utils": "0.3.0",
     "lodash": "^4.17.10",
     "react-props-stream": "^1.0.0",
     "rxjs": "^6.2.0"

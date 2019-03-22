@@ -1,6 +1,6 @@
 {
   "name": "@lyra/resolver",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Resolves parts and plugins from a Lyra configuration",
   "main": "lib/resolver.js",
   "scripts": {
@@ -39,8 +39,8 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@lyra/generate-help-url": "^0.2.5",
-    "@lyra/util": "^0.2.5",
+    "@lyra/generate-help-url": "0.3.0",
+    "@lyra/util": "0.3.0",
     "fs-extra": "^6.0.1",
     "lodash": "^4.17.10",
     "path-exists": "^3.0.0",
