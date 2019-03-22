@@ -25,7 +25,7 @@ type Props = {
 export default class AcceptReviewerInvite extends React.Component<Props> {
   handleAcceptInvite = () => {
     const {invite, user, venue} = this.props
-    const claimUrl = `/invitations/claim/${invite._id}?venueId=${venue._id}`
+    const claimUrl = `/invitations/claim/${invite._id}?venueId=${venue.dataset}`
     const maybeLogout = user ? client.auth.logout() : Promise.resolve()
     maybeLogout
       .then(() =>

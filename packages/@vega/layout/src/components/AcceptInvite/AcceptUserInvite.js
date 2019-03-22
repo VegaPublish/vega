@@ -21,7 +21,7 @@ export default class AcceptUserInvite extends React.Component<Props> {
 
   handleAcceptInvite = () => {
     const {invite, venue} = this.props
-    const claimUrl = `/invitations/claim/${invite._id}?venueId=${venue._id}`
+    const claimUrl = `/invitations/claim/${invite._id}?venueId=${venue.dataset}`
     client
       .request({
         url: claimUrl

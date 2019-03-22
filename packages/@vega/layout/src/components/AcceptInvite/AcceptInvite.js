@@ -18,7 +18,7 @@ const loadProps = props$ => {
   ).pipe(
     map(
       ([inviteToken, currentVenue]) =>
-        `/invitations/${inviteToken}?venueId=${currentVenue._id}`
+        `/invitations/${inviteToken}?venueId=${currentVenue.dataset}`
     ),
     distinctUntilChanged(),
     switchMap(request)
