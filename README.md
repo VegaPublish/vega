@@ -12,7 +12,7 @@
 
 ## Saga, Lyra, Vega?
 
-**Saga** is the backend required to run Vega. If you don't have one of those available, follow instructions in the (Saga readme)[https://github.com/VegaPublish/saga]. If setting up Saga seems like a daunting task, ask your local IT guru to do it for you :)
+**Saga** is the backend required to run Vega. If you don't have one of those available, follow instructions in the [Saga readme](https://github.com/VegaPublish/saga). If setting up Saga seems like a daunting task, ask your local IT guru to do it for you :)
 
 **Vega** is the editing environment which runs in the browser and makes editors happy.
 **Lyra** is the UI platform which Vega runs on.
