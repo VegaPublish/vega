@@ -14,7 +14,7 @@ export default {
     return {
       status: 'indifferent',
       title: featureConfig.title,
-      description: `${moment(date).format('D. MMMM YYYY')} (${moment(
+      description: `${moment(date).format('D MMMM, YYYY')} (${moment(
         date
       ).fromNow()})`
     }
