@@ -12,7 +12,9 @@ const loadProps = props$ =>
     switchMap(stage => observePaths(stage, ['displayColor', 'title'])),
     map(stage => {
       return {
-        dot: stage ? {label: stage.title, color: stage.displayColor} : null
+        // original below with null value
+        // dot: stage ? {label: stage.title, color: stage.displayColor} : null
+        dot: stage ? {label: stage.title || 'No stage assigned', color: stage.displayColor || '#000'} : null
       }
     })
   )
