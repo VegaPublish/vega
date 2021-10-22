@@ -40,7 +40,7 @@ export default {
       title: 'Content',
       name: 'content',
       type: 'reviewBlockContent',
-      description: "Reviewer’s evaluation of the article"
+      description: "Reviewer's evaluation of the article"
     },
     {
       title: 'Recommendation',
