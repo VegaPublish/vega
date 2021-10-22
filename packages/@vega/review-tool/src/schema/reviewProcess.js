@@ -30,7 +30,7 @@ export default {
       title: 'Content',
       name: 'content',
       type: 'reviewBlockContent',
-      description: "The editor's conclusive review of the article"
+      description: "The editor's conclusive summary evaluation based on the reviews"
     },
     {
       title: 'Decision',
