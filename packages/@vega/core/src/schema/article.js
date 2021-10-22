@@ -63,7 +63,7 @@ export default {
       title: 'Track',
       type: 'reference',
       to: {type: 'track'},
-      description: 'If Track changes, make sure Stage is correct',
+      description: 'When changing Track, also change the Stage (below) if needed.',
       fieldset: 'metadata',
       validation: Rule => Rule.required(),
       options: {
