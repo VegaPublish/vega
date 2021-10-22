@@ -51,6 +51,7 @@ export default {
         list: [
           {title: 'Publish', value: 'publish'},
           {title: 'Publish with Revisions', value: 'publish-with-revisions'},
+          {title: 'Revise and Resubmit', value: 'revise-and-resubmit'},
           {title: 'Reject', value: 'reject'}
         ]
       }
