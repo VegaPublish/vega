@@ -59,6 +59,7 @@ export default {
     {
       title: 'Media',
       type: 'object',
+      name: 'mediaBlockContent',
       fields: [
         {
           title: 'Media URL',
