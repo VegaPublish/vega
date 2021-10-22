@@ -27,7 +27,7 @@ export default {
       type: 'number',
       title: 'Order',
       description:
-        'The order in which a stage will appear when listed among other stages'
+        'This is the order of stages in the Development tab.'
     },
     {
       name: 'purpose',
