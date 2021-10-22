@@ -23,7 +23,7 @@ export default class DueDateFullView extends React.PureComponent<Props, *> {
     if (dueDateString) {
       return (
         <div>
-          {format(new Date(dueDateString), 'D. MMMM YYYY')}
+          {format(new Date(dueDateString), 'D MMMM, YYYY')}
           {' ('}
           {distanceInWordsToNow(dueDateString)}
           {' ago)'}
